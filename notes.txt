@@ -16,3 +16,17 @@ How to create a form?
 <tr> --->table row
 <td> --->table division.
 
+
+<tr><td><img src="123.jpeg" alt="no image found" height=150 width=150/><td>
+<img src=123.jpeg alt="no image found" height=150 width=150></tr>
+
+<iframe=maps,forms>
+step 1:- maps.google.com
+
+step 2:-search for the location
+
+step 3:- click on share
+
+step 4:-embed a map
+
+step 5:- copy the link and paste in the html page.
