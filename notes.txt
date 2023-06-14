@@ -1,0 +1,18 @@
+HTML:- hyper text markup language.
+It is used for designing the frontend.We have predifined tags.The tags which we open has to be closed.
+HTML is a user freindly language.We use browser to view the output.(crome,safari,internet explorer)
+We will be using html5 version.We have to save the file by .html extention.
+How to create a form?
+<html></html>
+<body></body>
+<form></form>  ----->to connect frontend to middleware
+<h1></h1>  ---->heading tag the font will be bold 
+<h2></h2>
+----
+<h6></h6> 
+
+<hr color=red>  --->horizontal tag.
+<table> </table>   --->table tag
+<tr> --->table row
+<td> --->table division.
+
