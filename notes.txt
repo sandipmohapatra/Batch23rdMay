@@ -30,3 +30,21 @@ step 3:- click on share
 step 4:-embed a map
 
 step 5:- copy the link and paste in the html page.
+
+----------------------------------------------------------------------------------
+google form :-
+1)step 1:- https://docs.google.com/forms/u/0/
+
+2)step 2:-design the form
+
+3)step 3:- make the field required
+
+4)step 4:- view in sheet
+
+5)step 5:-send
+
+6)step 6:-<> embed html 
+
+7)step 7:- copy and paste in your html page. 
+
+
