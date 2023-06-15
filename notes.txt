@@ -47,4 +47,33 @@ google form :-
 
 7)step 7:- copy and paste in your html page. 
 
+--------------------------------------------------------------------------------
+CSS -cascading style sheets
+It is used to design the web pages.
+
+project ---100 pages
+
+clients --font size should be 14
+font face----Times new Roman
+-------------
+you can write an external css and call/link it to every page
+at a time all the pages font size and font face will change.
+
+where are 3 types of css
+-----------------------------------------------------------------------
+1)internal css applied to a single page.
+2)external css applied to the whole project.
+3)inline css applied to the single line.
+-------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
