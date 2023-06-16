@@ -9,9 +9,19 @@
 var c=document.getElementById("c1");
 var x=c.getContext("2d");
 x.fillStyle="yellow";
-x.fillRect(100,100,200,200);
+x.fillRect(100,100,600,600);
+
 x.fillStyle="red";
-x.fillRect(150,150,100,100);
+x.fillRect(150,150,300,300);
+
+x.moveTo(0,0);
+x.lineTo(500,500);
+x.stroke();
+
+x.font="30px Arial";
+x.fillText("Hello Students",250,250);
+x.strokeText("Hello Students",250,250);
+x.strokeText("Happy Weekend",280,280);
 
 </script>
 </html>
