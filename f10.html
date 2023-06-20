@@ -1,0 +1,28 @@
+<html>
+<script>
+var accno=prompt("Enter your accno");
+var name=prompt("Enter your name");
+var address=prompt("Enter your address");
+var phoneno=prompt("Enter your phone no");
+var balance=prompt("Enter your balance");
+var ch=prompt("Enter your choice");
+switch(ch)
+{
+case "deposite":
+var d=prompt("enter the amount to deposite");
+balance=parseInt(balance)+parseInt(d);
+document.write("The final balance is "+balance);
+break;
+case "withdraw":
+var d=prompt("enter the amount to withdraw");
+balance=parseInt(balance)-parseInt(d);
+if(balance <=1000)
+document.write("Sorry your balance is low");
+else
+document.write("The final balance is "+balance);
+break;
+default:
+document.write("Sorry invalid input");
+}
+</script>
+</html>
