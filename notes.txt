@@ -65,6 +65,65 @@ where are 3 types of css
 2)external css applied to the whole project.
 3)inline css applied to the single line.
 -------------------------------------------------------------------------
+HTML version-5
+---------------------------------
+1)table,th,td,tr,cell spacing,cell padding,border
+2)form action :- to connect with the middlewire.
+3)iframe :- google map,google form
+4)div,p,span
+5)<h1>...<h6>,<marquee>
+6)fieldset
+7)image,audio,video
+8)list <ol>,<ul>,<dl><dd>
+9)local storage,session storage
+10)location
+-------------------------------------------------------------------
+CSS version-3
+---------------------------
+1)margin
+2)padding
+3)id
+4)class
+5)float
+6)internal css
+7)external css
+8)inline css
+---------------------------------------------
+BootStrap 4
+------------------------
+1)buttons
+2)alert
+3)form-control
+4)table
+5)nav bars
+6)ghaphicons
+7)background images,color show to added to the class using css.
+------------------------------------------------------------------------------------
+javascript
+--------------------
+1)It is used to make the webpage dynamic.
+2)we have to save the file with .html extention.
+3)java script is case sensitive.
+4)It is supported by advance browser.
+5)Javascript support Object Oriented Programming.
+6)We have a datatype called var.
+7)We have lot of pre-defined functions and we can create user-defined function.
+8)We can create class,object,constructor in javascript.
+9)Javascript is mainly used to validate the html pages.
+10)We have inbuild function like Math function,date function,string function,events,getElementById,innerHTML...
+-----------------------------------------------------------------------------------------------------------------------
+<html>
+<style>
+</style>
+<script>
+</script>
+<body>
+</body>
+</html>
+--------------------------------------------------------------------------------
+
+
+
 
 
 
