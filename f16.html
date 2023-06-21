@@ -1,0 +1,19 @@
+<!--Example of class and Object -->
+<html>
+<script>
+function emp(id,name,address)
+{
+this.id=id;  <!-- this is a reference pointer which points to itself -->
+this.name=name;
+this.address=address;
+}
+x=new emp(1001,"Darshan","Bangalore");
+y=new emp(1002,"Priyanka","Bangalore");
+z=new emp(1003,"Charan","Hydrabad");
+
+document.write(x.id+"  "+x.name+"  "+x.address);
+document.write(y.id+"  "+y.name+"  "+y.address);
+document.write(z.id+"  "+z.name+"  "+z.address);
+
+</script>
+</html>
