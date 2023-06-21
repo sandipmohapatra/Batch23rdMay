@@ -31,6 +31,18 @@ alert("phoneno is empty");
 f1.t4.focus();
 }
 
+else if(isNaN(d))
+{
+alert("Enter only number");
+f1.t4.focus();
+}
+
+else if(d.length!=10)
+{
+alert("Enter 10 digits");
+f1.t4.focus();
+}
+
 else if(e=="")
 {
 alert("password is empty");
