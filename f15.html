@@ -8,6 +8,30 @@ var a=parseInt(document.getElementById("t1").value);
 var b=parseInt(document.getElementById("t2").value);
 t3.value=a+b;
 }
+function subno()
+{
+var a=parseInt(document.getElementById("t1").value);
+var b=parseInt(document.getElementById("t2").value);
+t3.value=a-b;
+}
+function mulno()
+{
+var a=parseInt(document.getElementById("t1").value);
+var b=parseInt(document.getElementById("t2").value);
+t3.value=a*b;
+}
+function divno()
+{
+var a=parseInt(document.getElementById("t1").value);
+var b=parseInt(document.getElementById("t2").value);
+t3.value=a/b;
+}
+
+function powno()
+{
+var a=parseInt(document.getElementById("t1").value);
+t3.value=a*a;
+}
 </script>
 
 <body>
@@ -15,7 +39,12 @@ t3.value=a+b;
 <table>
 <tr><td>Enter a no<td><input type=text id=t1 size=20></tr>
 <tr><td>Enter a no<td><input type=text id=t2 size=20></tr>
-<tr><td><td><input type=submit value=add onclick=addno()></tr>
+<tr><td><td>
+<input type=submit value=add onclick=addno()>
+<input type=submit value=sub onclick=subno()>
+<input type=submit value=mul onclick=mulno()>
+<input type=submit value=div onclick=divno()>
+<input type=submit value=pow onclick=powno()></tr>
 <tr><td>Answer<td><input type=text id=t3 size=20></tr>
 </table>
 </body>
