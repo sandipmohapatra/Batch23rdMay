@@ -1,5 +1,12 @@
 <html>
 <script>
+function space(s)
+{
+var k;
+document.all ? k = s.keycode : k = s.which;
+return ((k != 32));
+}
+
 function fun()
 {
 var a=f1.t1.value;
@@ -59,11 +66,11 @@ f1.submit();
 <form action=second method=get name=f1>
 <h1><center>Student Registration Page</center></h1><hr>
 <table>
-<tr><td>Enter your name<td><input type=text name=t1 size=20></tr>
-<tr><td>Enter your address<td><textarea name=t2 rows=5 cols=21></textarea></tr>
-<tr><td>Enter your email<td><input type=email name=t3 size=20></tr>
-<tr><td>Enter your phoneno<td><input type=text name=t4 size=20></tr>
-<tr><td>Enter your password<td><input type=password name=t5 size=20></tr>
+<tr><td>Enter your name<td><input type=text name=t1 size=20 onkeypress="return space(event)"/></tr>
+<tr><td>Enter your address<td><textarea name=t2 rows=5 cols=21 onkeypress="return space(event)"/></textarea></tr>
+<tr><td>Enter your email<td><input type=email name=t3 size=20 onkeypress="return space(event)"/></tr>
+<tr><td>Enter your phoneno<td><input type=text name=t4 size=20 onkeypress="return space(event)"/></tr>
+<tr><td>Enter your password<td><input type=password name=t5 size=20 onkeypress="return space(event)"/></tr>
 <tr><td><td><input type=button value=submit onClick=fun()></tr>
 </table>
 </form>
