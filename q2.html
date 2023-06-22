@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+
+$("#btn1").click(function(){
+$("#test1").text("Hello JQuery");
+});
+
+$("#btn2").click(function(){
+$("#test2").html("<b>Hello JQuery</b>");
+});
+
+$("#btn3").click(function(){
+$("#test3").text("Hello Mphais Student");
+});
+
+});
+</script>
+
+</head>
+
+
+<body bgcolor=yellow>
+<h1>This is JQuery example-2</h1>
+<p id="test1">This is JQuery example-2</p>
+<p id="test2">This is JQuery example-2 to change the text</p>
+<p id="test3">This is JQuery DOM manipulation</p>
+<button id="btn1" >SET TEXT</button>
+<button id="btn2" >SET HTML</button>
+<button id="btn3" >SET TEXT</button>
+</body>
+</html>
