@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+$("button").click(function(){
+$("h1, h2 ,h3").addClass("blue");
+$("div, p").addClass("imp");
+});
+});
+</script>
+<style>
+
+.imp{
+font-weight: bold;
+font-size: xx-large;
+}
+
+.blue{
+color:blue;
+}
+
+</style>
+
+
+</head>
+
+
+<body bgcolor=yellow>
+<h1>This is JQuery example-4</h1>
+<h2>This is JQuery example-4</h2>
+<h3>This is JQuery example-4</h3>
+
+<p>This is JQuery example-2</p>
+<p>This is JQuery example-2 to change the text</p>
+<p>This is JQuery DOM manipulation</p>
+
+<div>This is JQuery DOM manipulation</div>
+
+<button>Add class to the elements</button>
+
+
+</body>
+</html>
