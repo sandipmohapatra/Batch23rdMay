@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+
+$("#button3").click(function(){
+$("div").slideUp(2000);
+});
+
+$("#button4").click(function(){
+$("div").slideDown(2000);
+});
+
+$("#button1").click(function(){
+$("div").animate({left: '900px'});
+});
+
+$("#button2").click(function(){
+$("div").animate({left: '-10px'});
+});
+
+
+
+});
+</script>
+
+<body bgcolor=yellow>
+<button id="button1">Go to Right</button>
+<button id="button2">Go to Left</button>
+<button id="button3">Slide Up</button>
+<button id="button4">Slide Down</button>
+
+<div style="background:red ; height:350px ; width:150px ; position:absolute; ">
+<h1>This is JQuery animation</h1>
+<p>This is JQuery animation</p>
+<p>This is JQuery animation</p>
+<p>This is JQuery animation</p>
+</div>
+
+</body>
+</html>
