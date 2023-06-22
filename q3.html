@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+
+$("#btn1").click(function(){
+$("p").append("Append Text");
+});
+
+$("#btn2").click(function(){
+$("ol").append("<li>Append Text</li>");
+});
+
+
+});
+</script>
+
+</head>
+
+
+<body bgcolor=yellow>
+<h1>This is JQuery example-2</h1>
+<p>This is JQuery example-2</p>
+<p>This is JQuery example-2 to change the text</p>
+<p>This is JQuery DOM manipulation</p>
+<ol>
+<li> Add elements 1</li>
+<li> Add elements 2</li>
+<li> Add elements 3</li>
+</ol>
+<button id="btn1" >Append</button>
+<button id="btn2" >Append</button>
+
+</body>
+</html>
