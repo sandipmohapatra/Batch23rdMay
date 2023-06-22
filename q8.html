@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+$("button").click(function(){
+alert("Name :"+$("#t1").val());
+alert("Address :"+$("#t2").val());
+alert("Phone no :"+$("#t3").val());
+});
+});
+</script>
+
+<body bgcolor=yellow>
+<table>
+<tr><td>Enter your name<td><input type=text id=t1 size=20></tr>
+<tr><td>Enter your address<td><input type=text id=t2 size=20></tr>
+<tr><td>Enter your phoneno<td><input type=text id=t3 size=20></tr>
+<tr><td><td><button>Show Value</button></tr>
+</table>
+</body>
+</html>
