@@ -1,0 +1,38 @@
+<!--WEB STORAGE is a HTML5 feature .It is used to store the data locally on the client machine.It stores data in form of key/value pair on the browser.Web storage is also known as DOM storage. It is similar to cookies. Cookies are stored in the local system.Your gmail,facebook username and password are stored into the cookies. every time you login it doesnot ask for username/password. 
+1)The web storage use 5MB storage space.
+2) The data stored by local storage never expires.
+3)Web Storage is more secure then cookies.
+
+There are 2 types of webstorage
+i)Local storage:-It uses windows.localStorage which stores data for every page.
+The data is available after the browser is closed.It never expire. 
+
+ii)Session storage:-It uses windows.sessionStorage which stores data for one session.Session is a time period when the client is connected with the server.In this the data will be lost when the session is closed or the browser is closed.
+-->
+
+<html>
+<head>
+<title>Local Storage</title>
+</head>
+<body>
+<h1>Local Storage Example-1</h1><hr>
+<script>
+localStorage.setItem("name","Sandip");
+localStorage.setItem("Address","Bangalore");
+localStorage.setItem("Phoneno","9988776655");
+localStorage.setItem("Email","sandip@gmail.com");
+document.write("Data will be displayed in the next Page");
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
