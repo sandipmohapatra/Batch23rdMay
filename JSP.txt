@@ -1,0 +1,21 @@
+First.html
+---------------------------
+<html>
+<body bgcolor=cyan>
+<h1><center>Employee Registration Form</center></h1><hr>
+<form action="Second.jsp">
+<table>
+<tr><td>Enter your Name<td><input type=text name=t1 size=20></tr>
+<tr><td>Enter your Address<td><input type=text name=t2 size=20></tr>
+<tr><td>Enter your Email<td><input type=text name=t3 size=20></tr>
+<tr><td>Enter your Phoneno<td><input type=text name=t4 size=20></tr>
+<tr><td>Enter your Physics<td><input type=text name=t5 size=20></tr>
+<tr><td>Enter your Chemistry<td><input type=text name=t5 size=20></tr>
+<tr><td>Enter your Biology<td><input type=text name=t5 size=20></tr>
+<tr><td><td><input type=Submit value=Insert name=b1><input type=Submit value=Update name=b1>
+<input type=Submit value=Delete name=b1><input type=Submit value=Select name=b1>
+</tr>
+</table>
+</form>
+</body>
+</html>
