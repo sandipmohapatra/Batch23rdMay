@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Hospital>
+<HealthCard>
+    <PatientName pid="212">Sanjay</PatientName>
+    <date>26/06/2023</date>
+    <BP>125/82</BP>
+    <TempRead1 scale="C" time="1130">102</TempRead1>
+    <TempRead2 scale="C" time="1530">100</TempRead2>
+    <TempRead3 scale="C" time="1930">98.4</TempRead3>
+</HealthCard>
+<HealthCard>
+    <PatientName pid="212">Sandip</PatientName>
+    <date>26/06/2023</date>
+    <BP>125/82</BP>
+    <TempRead1 scale="C" time="1130">102</TempRead1>
+    <TempRead2 scale="C" time="1530">100</TempRead2>
+    <TempRead3 scale="C" time="1930">98.4</TempRead3>
+</HealthCard>
+
+</Hospital>
