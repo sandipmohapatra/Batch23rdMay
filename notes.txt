@@ -212,6 +212,15 @@ ans:-1)Does not support namespaces.
 2)Doesnot support inheritance
 3)not extensible
 ---------------------------------------------------------------------------
+frontend ---->middleware ---->backend
+---------------------------------------------------------
+oracle
+https://drive.google.com/file/d/0B_8PmSMM3tRdMl9PS1hUMFFEbkk/view?usp=sharing&resourcekey=0-qjqe8sjixyAi8meOXxO_jQ
+--------------------------------------------------------------------------
+eclipse
+------------------
+eclipse.org/downloads/
+-------------------------------------------------
 
 
 
