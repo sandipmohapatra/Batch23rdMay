@@ -221,7 +221,15 @@ eclipse
 ------------------
 eclipse.org/downloads/
 -------------------------------------------------
-
+oracle:-
+----------------
+create table employee2023(empno varchar2(30),name varchar2(30),address varchar2(30),email varchar2(30));
+insert into employee2023 values('mph102','priyanka','bangalore','priyanka@gmail.com');
+select * from employee2023;
+update employee2023 set address='Hydrabad' where name='priyanka';
+alter table employee2023 add phoneno varchar2(20);
+update employee2023 set phoneno='9988711655' where name='priyanka';
+--------------------------------------------------------
 
 
 
