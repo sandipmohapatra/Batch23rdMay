@@ -229,6 +229,11 @@ select * from employee2023;
 update employee2023 set address='Hydrabad' where name='priyanka';
 alter table employee2023 add phoneno varchar2(20);
 update employee2023 set phoneno='9988711655' where name='priyanka';
+alter table employee2023 add physics number;
+alter table employee2023 add chemistry number;
+alter table employee2023 add biology number;
+alter table employee2023 add total number;
+alter table employee2023 add avg number;
 --------------------------------------------------------
 
 
