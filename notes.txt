@@ -121,8 +121,48 @@ javascript
 </body>
 </html>
 --------------------------------------------------------------------------------
+XML :-extensible markup language.
+It is used to store small amount of data.
+In html we have predefined tags where as in XML we use user defined tags.
+we have the extension .xml
+we have a root tag and we have branches.
+example:-
+-------------------
+ <mphasis>
 
+<employee>
+<empid>101</empid>
+<name>pavan</name>
+<address>Bangalore</address>
+</employee>
 
+<employee>
+<empid>102</empid>
+<name>priyanka</name>
+<address>Bangalore</address>
+</employee>
+
+<employee>
+<empid>103</empid>
+<name>darshan</name>
+<address>Bangalore</address>
+</employee>
+
+<employee>
+<empid>104</empid>
+<name>Umesh</name>
+<address>Bangalore</address>
+</employee>
+
+<employee>
+<empid>105</empid>
+<name>ravi</name>
+<address>Hydrabad</address>
+</employee>
+
+</mphasis>
+
+----------------------------------------------------------
 
 
 
