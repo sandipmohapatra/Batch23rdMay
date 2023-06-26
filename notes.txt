@@ -234,6 +234,9 @@ alter table employee2023 add chemistry number;
 alter table employee2023 add biology number;
 alter table employee2023 add total number;
 alter table employee2023 add avg number;
+update employee2023 set physics=87,chemistry=99,biology=97 where name='priyanka';
+update employee2023 set total=physics+chemistry+biology where name in ('priyanka','darshan');
+update employee2023 set avg=round(total/3,2) where name in ('priyanka','darshan');
 --------------------------------------------------------
 
 
