@@ -177,3 +177,75 @@ catch(Exception ae)
 }
 %>
 ------------------------------------------------
+example-4
+---------------------
+<%@page import="java.sql.*" %>
+<%String id=request.getParameter("t0");
+String a=request.getParameter("t1");
+String b=request.getParameter("t2");
+String c=request.getParameter("t3");
+String d=request.getParameter("t4");
+String e=request.getParameter("t5");
+String f=request.getParameter("t6");
+String g=request.getParameter("t7");
+String h=request.getParameter("b1");
+%>
+
+<%
+try
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	if(h.equals("Insert"))
+			{
+	PreparedStatement st=con.prepareStatement
+("insert into employee2023(empno,name,address,email,phoneno,physics,chemistry,biology) values(?,?,?,?,?,?,?,?)");
+st.setString(1,id);
+st.setString(2,a);
+st.setString(3,b);
+st.setString(4,c);
+st.setString(5,d);
+st.setString(6,e);
+st.setString(7,f);
+st.setString(8,g);
+st.execute();
+out.println("Row inserted");
+			}
+	
+	else if(h.equals("Update"))
+			{
+	PreparedStatement st=con.prepareStatement("update employee2023 set name=?,address=? where empno=?");
+st.setString(1,a);
+st.setString(2,b);
+st.setString(3,id);
+st.execute();
+out.println("Row updated");
+			}
+	else if(h.equals("Delete"))
+			{
+	PreparedStatement st=con.prepareStatement("delete from employee2023 where empno=?");
+st.setString(1,id);
+st.execute();
+out.println("Row delete");
+			}
+	else
+	{
+		PreparedStatement st=con.prepareStatement("select * from  employee2023");
+		ResultSet rs=st.executeQuery();
+		out.println("<table border=1>");
+		out.println("<tr><th>Empno<th>Name<th>Address<th>Email<th>Phone no<th>Physics<th>Chemistry<th>Biology<th>Total<th>Average</tr>");
+		while(rs.next())
+		{
+out.println("<tr><td>" +rs.getString(1)+" <td> "+rs.getString(2)+" <td> "+rs.getString(3)+"<td> "+rs.getString(4)
++"<td> "+rs.getString(5)+"<td> "+rs.getString(6)+"<td> "+rs.getString(7)+"<td> "+rs.getString(8)+
+"<td> "+rs.getString(9)+" <td>"+rs.getString(10)+"</tr>");
+					
+		}
+		out.println("</table>");
+	}
+}
+catch(Exception ae)
+{
+}
+%>
+------------------------------------------------------------------------
