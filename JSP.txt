@@ -3,19 +3,37 @@ First.html
 <html>
 <body bgcolor=cyan>
 <h1><center>Employee Registration Form</center></h1><hr>
-<form action="Second.jsp">
+<form action="second.jsp">
 <table>
 <tr><td>Enter your Name<td><input type=text name=t1 size=20></tr>
 <tr><td>Enter your Address<td><input type=text name=t2 size=20></tr>
 <tr><td>Enter your Email<td><input type=text name=t3 size=20></tr>
 <tr><td>Enter your Phoneno<td><input type=text name=t4 size=20></tr>
 <tr><td>Enter your Physics<td><input type=text name=t5 size=20></tr>
-<tr><td>Enter your Chemistry<td><input type=text name=t5 size=20></tr>
-<tr><td>Enter your Biology<td><input type=text name=t5 size=20></tr>
-<tr><td><td><input type=Submit value=Insert name=b1><input type=Submit value=Update name=b1>
-<input type=Submit value=Delete name=b1><input type=Submit value=Select name=b1>
+<tr><td>Enter your Chemistry<td><input type=text name=t6 size=20></tr>
+<tr><td>Enter your Biology<td><input type=text name=t7 size=20></tr>
+<tr><td><td>
+<input type=Submit value=Insert name=b1>
+<input type=Submit value=Update name=b1>
+<input type=Submit value=Delete name=b1>
+<input type=Submit value=Select name=b1>
 </tr>
-</table>
-</form>
-</body>
+</table></form></body>
 </html>
+-----------------------------------------------------------------------------------
+<%String a=request.getParameter("t1");
+String b=request.getParameter("t2");
+String c=request.getParameter("t3");
+String d=request.getParameter("t4");
+String e=request.getParameter("t5");
+String f=request.getParameter("t6");
+String g=request.getParameter("t7");%>
+
+<%out.println("The name is "+a);
+out.println("The address is "+b);
+out.println("The email is "+c);
+out.println("The phone no is "+d);
+out.println("The Physics is "+e);
+out.println("The chemistry is "+f);
+out.println("The biology is "+g);%>
+-----------------------------------------------------------------------------
