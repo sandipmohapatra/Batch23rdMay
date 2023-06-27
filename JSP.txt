@@ -37,3 +37,68 @@ out.println("The Physics is "+e);
 out.println("The chemistry is "+f);
 out.println("The biology is "+g);%>
 -----------------------------------------------------------------------------
+example-2
+---------------------
+<html>
+<body bgcolor=cyan>
+<h1><center>Employee Registration Form</center></h1><hr>
+<form action="second.jsp">
+<table>
+<tr><td>Enter your empid<td><input type=text name=t0 size=20></tr>
+<tr><td>Enter your Name<td><input type=text name=t1 size=20></tr>
+<tr><td>Enter your Address<td><input type=text name=t2 size=20></tr>
+<tr><td>Enter your Email<td><input type=text name=t3 size=20></tr>
+<tr><td>Enter your Phoneno<td><input type=text name=t4 size=20></tr>
+<tr><td>Enter your Physics<td><input type=text name=t5 size=20></tr>
+<tr><td>Enter your Chemistry<td><input type=text name=t6 size=20></tr>
+<tr><td>Enter your Biology<td><input type=text name=t7 size=20></tr>
+<tr><td><td>
+<input type=Submit value=Insert name=b1>
+<input type=Submit value=Update name=b1>
+<input type=Submit value=Delete name=b1>
+<input type=Submit value=Select name=b1>
+</tr>
+</table></form></body>
+</html>
+-----------------------------------------------------------------------------------
+<%@page import="java.sql.*" %>
+<%String id=request.getParameter("t0");
+String a=request.getParameter("t1");
+String b=request.getParameter("t2");
+String c=request.getParameter("t3");
+String d=request.getParameter("t4");
+String e=request.getParameter("t5");
+String f=request.getParameter("t6");
+String g=request.getParameter("t7");%>
+
+<%out.println("The empno is "+id);
+out.println("The name is "+a);
+out.println("The address is "+b);
+out.println("The email is "+c);
+out.println("The phone no is "+d);
+out.println("The Physics is "+e);
+out.println("The chemistry is "+f);
+out.println("The biology is "+g);%>
+
+<%
+try
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	PreparedStatement st=con.prepareStatement
+("insert into employee2023(empno,name,address,email,phoneno,physics,chemistry,biology) values(?,?,?,?,?,?,?,?)");
+st.setString(1,id);
+st.setString(2,a);
+st.setString(3,b);
+st.setString(4,c);
+st.setString(5,d);
+st.setString(6,e);
+st.setString(7,f);
+st.setString(8,g);
+st.execute();
+}
+catch(Exception ae)
+{
+}
+%>
+----------------------------------------------------------------------
