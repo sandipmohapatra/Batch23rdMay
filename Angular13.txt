@@ -1,0 +1,29 @@
+Angular13
+---------------------
+1)The scripting language will be typescript.Browser cannot understand typescript (.ts).so after compilelation of type script it is converted into .js  and the browser can understand and display the output.
+
+2)Angular is faster because of virtual DOM.So when the page is refreshed only the modified part will be loaded not the whole page. 
+example :- cricbuzz.com.In this only the score part is updated not the whole page.
+
+3)It is mostly used for development of single page application.
+
+4)Dependency injection:- loading of dependency at the runtime.
+
+5)It support two way bindings.
+
+6)Testing  of our application can be done using jasmine and karma.
+---------------------------------------------------------------------------------------------
+software installation
+------------------------------------
+1)nodejs download
+2)npm install -g typescipt
+3)to compile:-
+tsc example1.ts
+4)to run:-
+node example1.js
+-------------------------------------------------------------------------
+
+
+
+
+
