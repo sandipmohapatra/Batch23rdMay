@@ -69,6 +69,31 @@ example-2
 
 </table>
 -------------------------------------------------------------------------------
+example-3
+-------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent
+{
+  name:string = `Pawan`;
+  nameList:string[]=["Priya","Darshan","Mohan","Anil","Sunil"];
+  title = 'mphasis2023';
+}
+---------------------------------------------------------------------------------
+<h1>Employee List</h1><hr color="red">
+<p>My name is {{name}}</p>
+<p>My Friends are {{nameList[0]}}</p>
+<p>My Friends are {{nameList[1]}}</p>
+<p>My Friends are {{nameList[2]}}</p>
+<p>My Friends are {{nameList[3]}}</p>
+<p>My Friends are {{nameList[4]}}</p>
+
+----------------------------------------------------------------------------------------------
 
 
 
