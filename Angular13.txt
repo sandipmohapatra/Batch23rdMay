@@ -108,8 +108,21 @@ step 3:- goto app.module.ts
 bootstrap: [LoginComponent]
 
 step 4:- modify or create login.component.html 
+
+step-5:-ng serve
 ---------------------------------------------------------------------------------------------------------------
-ng serve
+how to create registration page
+-------------------------------------------
+step 1:- ng g c registration
+
+step 2:-bootstrap: [RegisterComponent]   <---app.module.ts
+
+step3:-index.html paste the selector
+
+step4:- type html code in register.component.html
+
+step 5:- ng server
+--------------------------------------------------------------------------------
 
 
 
