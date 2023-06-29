@@ -52,6 +52,23 @@ h1{
   color:red;
 }
 -----------------------------------------------
+example-2
+------------------
+<h1>Employee Registration Page</h1><hr color="red">
+<p>The sum of 2 numbers are</p><p>{{7+8}}</p>
+<p>The mul of 2 numbers are</p><p>{{7*8}}</p>
+<p>The sub of 2 numbers are</p><p>{{7-8}}</p>
+<p>The div of 2 numbers are</p><p>{{16 / 8}}</p>
+<table>
+<tr><td>Enter your name</td><td><input type=text name=t1 size=20></td></tr>
+<tr><td>Enter your Address</td><td><input type=text name=t2 size=20></td></tr>
+<tr><td>Enter your name</td><td><input type=text name=t3 size=20></td></tr>
+<tr><td>Enter your name</td><td><input type=text name=t4 size=20></td></tr>
+<tr><td>Enter your name</td><td><input type=text name=t5 size=20></td></tr>
+<tr><td></td><td><input type=submit value="Submit"></td></tr>
+
+</table>
+-------------------------------------------------------------------------------
 
 
 
