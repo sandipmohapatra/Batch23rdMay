@@ -24,6 +24,36 @@ node example1.js
 -------------------------------------------------------------------------
 Angular13
 -----------------------
+step -1)npm install -g @angular/cli
+
+step -2)ng new mphasis2023
+
+step-3)ng serve
+to compile
+step-4)localhost:4200
+-----------------------------------------------
+Example 1
+--------------------
+app.component.html
+------------------------------
+<h1>Employee Registration Page</h1><hr color="red">
+<table>
+<tr><td>Enter your name</td><td><input type=text name=t1 size=20></td></tr>
+<tr><td>Enter your Address</td><td><input type=text name=t2 size=20></td></tr>
+<tr><td>Enter your name</td><td><input type=text name=t3 size=20></td></tr>
+<tr><td>Enter your name</td><td><input type=text name=t4 size=20></td></tr>
+<tr><td>Enter your name</td><td><input type=text name=t5 size=20></td></tr>
+<tr><td></td><td><input type=submit value="Submit"></td></tr>
+</table>
+---------------------------------------------------------
+app.component.css
+--------------------------------
+h1{
+  color:red;
+}
+-----------------------------------------------
+
+
 
 
 
