@@ -94,6 +94,22 @@ export class AppComponent
 <p>My Friends are {{nameList[4]}}</p>
 
 ----------------------------------------------------------------------------------------------
+example-4
+---------------------
+step 1:- to create a new module (login,register,service,contact,feedback)
+goto app module.(cd app)
+ng g c login
+ng g c register
+ng g c service
+
+step 2:-copy and paste the selector in index.html
+
+step 3:- goto app.module.ts 
+bootstrap: [LoginComponent]
+
+step 4:- modify or create login.component.html 
+---------------------------------------------------------------------------------------------------------------
+ng serve
 
 
 
