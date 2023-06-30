@@ -187,6 +187,90 @@ city:string;
 -----------------------------------------------------------------------------------------
 
 
+wap to display your details
+1)name
+2)collage name
+3)subjects studied
+4)qualification
+assign data using construactor.
+----------------------------------------------------------------------------------------------------
+Routing in Angular
+------------------------------
+1)Routing means navigating to different modules.
+2)Routing can load new contents into page without reloading  the complete page.
+3)SPA single page application and progressive web application requires routing.
+4)user can stay at one page and can get access to every page.
+5)Library file used is @Angular/router and @Angular/core
+6)RouterModule :-contains all the modules has to be routed. It imports routes .
+7)Routes:-Routes Object is used to configure routes to the application.
+------------------------------------------------------------------------------------
+import {Routes,RouterModule} from '@angular/router';
+------------------------- 
+
+step 1:-create a new file router.component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'darshan',
+  template :`
+ MENU<ul>
+ <li><a [routerLink]="['/login']">Login Page</a></li>
+ <li><a [routerLink]="['/register']">Register Page</a></li>
+ <li><a [routerLink]="['/contact']">Contact Page</a></li>
+</ul><hr>
+<router-outlet></router-outlet> `
+})
+export class RouterAppComponent
+{
+
+}
+-----------------------------------------------------------------------------------------------
+step 2:- modiyfy the app.module.ts
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ContactComponent } from './contact/contact.component';
+import { RouterAppComponent } from './router.component'; <---------------------------
+import {Routes,RouterModule} from '@angular/router';   <-------------------------------------
+
+const appRoutes: Routes =                  <-------------------------------------------
+[
+  {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
+  {path:'contact',component:ContactComponent},
+];
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    ContactComponent,
+    RouterAppComponent  <-----------------------------------------
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)  <---------------------------------
+  ],
+  providers: [],
+  bootstrap: [RouterAppComponent]    <------------------------------
+})
+export class AppModule { }
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
