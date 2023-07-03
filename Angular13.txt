@@ -339,7 +339,7 @@ book.component.html
 <body class="background-image">
 --------------------------------------------------To Create a Project-------------------------------------------------------------------
 step 1:-
------------------
+-----------------go into the app folder
 create the modules
 1)ng g c flight
 2)ng g c register
