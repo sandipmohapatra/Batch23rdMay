@@ -325,12 +325,177 @@ feedback
 
 pages with bootsrap
 -----------------------------------------------------------------------------
-<style>
+style.css
+-------------------
 .background-image {
   background-image: url('./assets/abcd.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+height:1100;
 }
+--------------------------
+book.component.html
+--------------------------------------------
+<body class="background-image">
+--------------------------------------------------To Create a Project-------------------------------------------------------------------
+step 1:-
+-----------------
+create the modules
+1)ng g c flight
+2)ng g c register
+3)ng g c book
+4)ng g c contact
+5)ng g c feedback
+6)ng g c search
+---------------------------------------------------------
+step 2:-
+modify the html files.
+register.component.html ,book,contact,feedback,search
+--------------------
+<body class="background-image">
+<h1>Flight Booking Page</h1><hr color="red">
+<table>
+  <tr><td>Enter your name</td><td><input type=text name=t1 size=20></td></tr>
+  <tr><td>Enter your Address</td><td><input type=text name=t2 size=20></td></tr>
+  <tr><td>Enter your Phoneno</td><td><input type=text name=t3 size=20></td></tr>
+  <tr><td>Enter your Date of Travel</td><td><input type=text name=t4 size=20></td></tr>
+  <tr><td>Enter your Time of Travel</td><td><input type=text name=t5 size=20></td></tr>
+  <tr><td></td><td><input type=submit value="Submit"></td></tr>
+  </table>
+
+    <div id=leftdiv>
+        <h3>This is AirLine Reservation System</h3>
+    </div>
+    <div id=middiv>
+        <h3>This is AirLine Reservation System</h3>
+    </div>
+    <div id=rightdiv>
+        <h3>This is AirLine Reservation System</h3>
+        </div>
+</body>
+---------------------------------------------------------------------------------
+step 3:-
+---------------
+open flight.component.html
+-------------------
+copy the selector and paste in the index.
+----------------------------------------------------------------
+step 4:-
+flight.component.html
+---------------------------------
+paste the bootstrap menu bar.
+---------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Airline Reservation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<header>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <body id="myPage">
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a class="w3-bar-item w3-button w3-coral"><i class="fa fa-home w3-margin-right"></i>Mphasis Batch-2023</a>
+  <a routerLink="home" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Registration <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a routerLink="/register" class="w3-bar-item w3-button">CustomerRegistration</a>
+      <a routerLink="/book"class="w3-bar-item w3-button">CustomerTicketBooking</a>
+    </div>
+    </div>
+  <a [routerLink]="['/contact']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  <a [routerLink]="['/search']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Search Flight</a>
+  <a [routerLink]="['/feedback']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">FeedBack</a>
+
+</div>
+<router-outlet></router-outlet>
+</div>
+    </body>
+    </header>
+
+--------------------------------------------------------------
+step 5:-
+-------------
+app.module.ts 
+-------------------------
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import {Routes,RouterModule} from '@angular/router';   <------------------------------------paste
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { AirlinesComponent } from './airlines/airlines.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { ContactComponent } from './contact/contact.component';
+import { SearchComponent } from './search/search.component';
+import { BookComponent } from './book/book.component';
+import { RegisterComponent } from './register/register.component';
+
+
+
+const appRoutes: Routes =    <------------------------------------------paste
+[
+  {path:'book',component:BookComponent},
+  {path:'register',component:RegisterComponent},
+  {path:'search',component:SearchComponent},
+  {path:'feedback',component:FeedbackComponent},
+  {path:'contact',component:ContactComponent},
+  ];
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    AirlinesComponent,
+    FeedbackComponent,
+    ContactComponent,
+    SearchComponent,
+    BookComponent,
+    RegisterComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes) <--------------------------paste
+  ],
+  providers: [],
+  bootstrap: [AirlinesComponent]  <----------------------------------paste
+})
+export class AppModule { }
+-------------------------------
+assert paste the images
+------------------------------------------
+style.css
+-------------------- 
+/* You can add global styles to this file, and also import other style files */
+
+.background-image {
+  background-image: url('./assets/img1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1120px;
+  }
+
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 
