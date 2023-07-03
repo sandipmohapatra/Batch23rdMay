@@ -1,17 +1,52 @@
 Angular13
 ---------------------
-1)The scripting language will be typescript.Browser cannot understand typescript (.ts).so after compilelation of type script it is converted into .js  and the browser can understand and display the output.
+1)For Angular the scripting language will be typescript.Browser cannot understand typescript (.ts).
+So after compilelation of type script it is converted into .js  and the browser can understand and display the output.
 
-2)Angular is faster because of virtual DOM.So when the page is refreshed only the modified part will be loaded not the whole page. 
+2)Angular is faster because of virtual DOM.<p>The score =203</p>
+So when the page is refreshed only the modified part will be loaded not the whole page. 
 example :- cricbuzz.com.In this only the score part is updated not the whole page.
 
-3)It is mostly used for development of single page application.
+3)It is mostly used for development of single page application.(SPA)
 
 4)Dependency injection:- loading of dependency at the runtime.
 
-5)It support two way bindings.
+5)It support one way and two way bindings.
 
 6)Testing  of our application can be done using jasmine and karma.
+
+7)Angular is an open source,cross platform.
+
+8)It provides end to end solution for building application, debugging,testing and deploying.
+
+9)Typescript support Object oriented Programming language.
+
+10)Angular framework support MVC,MVVM
+
+11)The speed is high as compared to older tecnology.
+
+12)It uses AOT compiler.[ahead-of-time].It convert the typescript into javascript.
+It provides faster rendering.
+
+-------------------------------------------------------------------------------------------------
+Types of Binding
+----------------------------
+1)one way binding:-
+i)interpolation:-{{6+7}},{{name}}
+we use double curly braces and is known as interpolation.
+or template expression.
+
+2)property binding :-
+<img[src]="shoe.jpg">
+It is used with square brackets to the DOM properties.
+
+3)event binding
+<button(click)="onClick()">Save</button>
+------------------------------------------------------------------------------------
+2)two way binding:-
+<input type=text name=t1 size=20 value="sandip">
+<input type=text name=t1 size=20 [(ngModel)]="name">
+in this user can store and update the entry.To make change in the user entry we use two-way binding. 
 ---------------------------------------------------------------------------------------------
 software installation
 ------------------------------------
