@@ -457,7 +457,7 @@ paste the bootstrap menu bar.
   <a [routerLink]="['/feedback']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">FeedBack</a>
 
 </div>
-<router-outlet></router-outlet>   <--give space to render the pages.
+<router-outlet></router-outlet>  <- it gives space to render the pages
 </div>
     </body>
     </header>
@@ -510,7 +510,7 @@ const appRoutes: Routes =    <------------------------------------------paste
 })
 export class AppModule { }
 -------------------------------
-assert is used to store the images
+assert paste the images
 ------------------------------------------
 style.css
 -------------------- 
@@ -533,33 +533,9 @@ bootstrap[],giving path,declarations(all the components),imports,
 
 *
 according to the bootstap the program will execute.
-
----------------------------------------------------
-<body class="background-image">
-<h1>Flight Booking Page</h1><hr color="red">
-<table>
-  <tr><td>Enter your name</td><td><input type=text name=t1 size=20></td></tr>
-  <tr><td>Enter your Address</td><td><input type=text name=t2 size=20></td></tr>
-  <tr><td>Enter your Phoneno</td><td><input type=text name=t3 size=20></td></tr>
-  <tr><td>Enter your Date of Travel</td><td><input type=text name=t4 size=20></td></tr>
-  <tr><td>Enter your Time of Travel</td><td><input type=text name=t5 size=20></td></tr>
-  <tr><td></td><td><input type=submit value="Submit"></td></tr>
-  </table>
-
-    <div id=leftdiv>
-        <h3>This is AirLine Reservation System</h3>
-    </div>
-    <div id=middiv>
-        <h3>This is AirLine Reservation System</h3>
-    </div>
-    <div id=rightdiv>
-        <h3>This is AirLine Reservation System</h3>
-        </div>
-</body>
----------------------------------------------------------------------------------
-onewaybinding
-example-1
-------------------------------
+---------------------------------------------------------------------------------------
+example-1(one way binding)
+--------------------------------------------
 import { Component } from '@angular/core';
 
 @Component({
@@ -576,7 +552,7 @@ public student=
   phone:9988776655,
 }
 }
--------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------
 <dl>
   <dt>Name</dt>
   <dd>{{student.Name}}</dd>
@@ -585,7 +561,92 @@ public student=
   <dt>Phone no</dt>
   <dd>{{student.phone}}</dd>
 </dl>
-------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+example-2
+---------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-onewayexample2',
+  templateUrl: './onewayexample2.component.html',
+  styleUrls: ['./onewayexample2.component.css']
+})
+export class Onewayexample2Component
+{
+public name='Samsung TV';
+public city='Bangalore';
+public inStock=true;
+
+public product={
+  name:'',
+  city:'',
+  inStock:false
+}
+
+public Click()
+{
+  this.product=
+  {
+    name:this.name,
+    city:this.city,
+    inStock:this.inStock
+  }
+}
+}
+-----------------------------------------------------------------------------
+example-2
+---------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<h2 class="text-center text-primary">This is an example of two way binding</h2>
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label>Name</label>
+      <input [(ngModel)]="name" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Shipped To</label>
+      <select [(ngModel)]="city" class="form-control">
+        <option>Bangalore</option>
+        <option>Hydrabad</option>
+        <option>Pune</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label>Is Stock Available</label>
+      <input [(ngModel)]="inStock" type="checkbox"> Yes
+    </div>
+    <div class="form-group">
+      <button (click)=Click() class="btn btn-primary btn-block">Update</button>
+    </div>
+    <div class="col-9">
+<table class="table table-hover">
+<colgroup span="1" style="background-color: yellow;"></colgroup>
+<tr><td>Name :</td><td [innerHTML]="product.name"></td></tr>
+<tr><td>Shipped to :</td><td>{{product.city}}</td></tr>
+<tr><td>Stock Present :</td><td>{{product.inStock}}</td></tr>
+</table>
+
+    </div>
+  </div>
+</div>
+</div>
+</body>
+--------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
