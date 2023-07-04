@@ -644,6 +644,8 @@ example-2
 </div>
 </body>
 --------------------------------------------------------------------------------------------------------
+import { FormsModule } from '@angular/forms';
+import------FormsModule
 
 
 
