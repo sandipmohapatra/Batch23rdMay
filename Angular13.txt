@@ -647,8 +647,95 @@ example-2
 import { FormsModule } from '@angular/forms';
 import------FormsModule
 --------------------------------------------------------------------------------------------------------
+example-3
+--------------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-onewayexample2',
+  templateUrl: './onewayexample2.component.html',
+  styleUrls: ['./onewayexample2.component.css']
+})
+export class Onewayexample2Component
+{
+public name='LG TV';
+public city='Bangalore';
+public price=45000.50;
+public inStock=false;
 
+public product={
+  name:'',
+  city:'',
+  price:0.0,
+  inStock:false
+}
+public Click()
+{
+  this.product=
+  {
+    name:this.name,
+    city:this.city,
+    price:this.price,
+    inStock:this.inStock
+  }
+}
+}
+-----------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<h2 class="text-center text-primary">This is an example of two way binding</h2>
+<div class="row">
+  <div class="col-6">
+    <div class="form-group">
+      <label>Name</label>
+      <input [(ngModel)]="name" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Shipped To</label>
+      <select [(ngModel)]="city" class="form-control">
+        <option>Bangalore</option>
+        <option>Hydrabad</option>
+        <option>Pune</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label>Is Stock Available</label>
+      <input [(ngModel)]="inStock" type="checkbox"> Yes
+    </div>
+
+    <div class="form-group">
+      <label>Price :</label>
+      <input [(ngModel)]="price" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <button (click)=Click() class="btn btn-primary btn-block">Update</button>
+    </div>
+    <div class="col-12">
+<table class="table table-hover">
+<colgroup span="1" style="background-color: yellow;"></colgroup>
+<tr><td>Name :</td><td [innerHTML]="product.name"></td></tr>
+<tr><td>Shipped to :</td><td>{{product.city}}</td></tr>
+<tr><td>Shipped to :</td><td>{{product.price}}</td></tr>
+<tr><td>Stock Present :</td><td>{{(product.inStock==true)?"product Available":"product not Available"}}</td></tr>
+</table>
+
+    </div>
+  </div>
+</div>
+</div>
+</body>
+------------------------------------------------------------------------------------------------
 
 
 
