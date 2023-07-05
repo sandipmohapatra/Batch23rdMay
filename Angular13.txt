@@ -736,7 +736,64 @@ public Click()
 </div>
 </body>
 ------------------------------------------------------------------------------------------------
+example-4
+---------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-ifdemo',
+  templateUrl: './ifdemo.component.html',
+  styleUrls: ['./ifdemo.component.css']
+})
+export class IfdemoComponent
+{
+public product={
+  Name:'Nike Shoes',
+  Price:4500.50,
+  Photo:'./assets/shoe.jpg'
+};
+public showImage=false;
+public btnText='Show';
+
+public TogglePreview()
+{
+this.showImage=(this.showImage==false)?true:false;
+this.btnText=(this.btnText=='Show')?'Hide':'Show';
+}
+}
+-------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<h2 class="text-center text-primary">This is an example of ng-if Directive</h2>
+<div class="row">
+  <div class="col-6">
+    <dl>
+      <dt><label>Name</label></dt>
+      <dd>{{product.Name}}</dd>
+      <dt><label>Price</label></dt>
+      <dd>{{product.Price}}</dd>
+    </dl>
+<button (click)="TogglePreview()" class="btn btn-primary">{{btnText}} Image </button>
+</div>
+<div class="col-9">
+<div *ngIf="showImage">
+<img [src]="product.Photo" height="300" width="300">
+<img src="./assets/shoe.jpg" height="300" width="300">
+</div>
+</div>
+</div>
+</div>
+------------------------------------------------------------------------------------------------------
 
 
 
