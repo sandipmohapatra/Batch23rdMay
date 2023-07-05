@@ -794,7 +794,27 @@ this.btnText=(this.btnText=='Show')?'Hide':'Show';
 </div>
 </div>
 ------------------------------------------------------------------------------------------------------
+example-6
+-------------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-for-demo',
+  templateUrl: './for-demo.component.html',
+  styleUrls: ['./for-demo.component.css']
+})
+export class ForDemoComponent
+{
+public products=['samsung tv','samsung freedge','samsung Laptop']
+}
+-------------------------------------------------
+<div>
+<h3>Product List</h3>
+<ol>
+<li *ngFor="let product of products">{{product}}</li>
+</ol>
+</div>
+------------------------------------------------------------------------------------------
 
 
 
