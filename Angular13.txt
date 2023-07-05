@@ -15,7 +15,7 @@ example :- cricbuzz.com.In this only the score part is updated not the whole pag
 
 6)Testing  of our application can be done using jasmine and karma.
 
-7)Angular is an open source,cross platform.
+7)Angular is an open source,cross platform,front-end.
 
 8)It provides end to end solution for building application, debugging,testing and deploying.
 
@@ -593,7 +593,7 @@ public Click()
   }
 }
 }
------------------------------------------------------------------------------
+------------------------------------Two way binding-----------------------------------------
 example-2
 ---------------------
 <!DOCTYPE html>
@@ -635,7 +635,7 @@ example-2
 <colgroup span="1" style="background-color: yellow;"></colgroup>
 <tr><td>Name :</td><td [innerHTML]="product.name"></td></tr>
 <tr><td>Shipped to :</td><td>{{product.city}}</td></tr>
-<tr><td>Stock Present :</td><td>{{product.inStock}}</td></tr>
+<tr><td>Stock Present :</td><td>{{(product.inStock==true)?"Product Available":"Product not Available"}}</td></tr>
 </table>
 
     </div>
@@ -646,7 +646,7 @@ example-2
 --------------------------------------------------------------------------------------------------------
 import { FormsModule } from '@angular/forms';
 import------FormsModule
-
+--------------------------------------------------------------------------------------------------------
 
 
 
