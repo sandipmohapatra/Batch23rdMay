@@ -2,24 +2,21 @@
 
 <html>
 <p id=x></p>
-
 <script>
 class Student
 {
-constructor(name,age=22)
+constructor(name,age)
 {
 this.name=name;
 this.age=age;
 } 
-static show()
+
+static show(y)
 {
-return 'The name is '+this.name+' The age is '+this.age;
+return 'The name is '+y.name+' The age is '+y.age;
 }
 }
-
 const ob1=new Student("Darshan",22);
-
-document.getElementById("x").innerHTML = Student.show();
-
+document.getElementById("x").innerHTML =Student.show(ob1);
 </script>
 </html>
