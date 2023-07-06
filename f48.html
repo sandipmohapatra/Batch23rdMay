@@ -1,0 +1,23 @@
+<!-- A promise is a javascript object that links with "Producing code" and "Consuming code".
+Producing code can take some time and consuming code will wait for the result. -->
+<html>
+<p id=x></p>
+
+<script>
+<!-- Producing code -->
+const p=new Promise(function(myResolve, myReject)
+{
+setTimeout(function()
+{
+myResolve("This is an example of Promise..");
+},3000);
+});
+
+<!--Consuming code-->
+p.then(function(value)
+{
+document.getElementById("x").innerHTML = value;
+});
+
+</script>
+</html>
