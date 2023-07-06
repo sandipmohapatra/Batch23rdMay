@@ -1,0 +1,42 @@
+<html>
+<p id=x></p>
+
+<script>
+class Student
+{
+constructor(name,age)
+{
+this.name=name;
+this.age=age;
+} 
+
+show()
+{
+return ' The student name is ' + this.name +' The student age is '+this.age ;
+}
+}
+
+class Subject extends Student
+{
+constructor(name,age,phy,chem,math)
+{
+super(name,age)
+this.phy=phy;
+this.chem=chem;
+this.math=math;
+this.total=this.phy+this.chem+this.math; 
+}
+
+display()
+{
+return this.show() +' physics mark is:  '+this.phy+' chemistry mark is :'+this.chem+' math mark is: '+this.math+' The total mark is '+this.total;
+}
+
+}
+
+const ob1=new Subject("Darshan",22,66,77,88);
+
+document.getElementById("x").innerHTML = ob1.display();
+
+</script>
+</html>
