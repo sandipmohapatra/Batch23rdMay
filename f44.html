@@ -1,0 +1,25 @@
+<!-- Static method :- to call a static method we have to use <class name>.method() -->
+
+<html>
+<p id=x></p>
+
+<script>
+class Student
+{
+constructor(name,age=22)
+{
+this.name=name;
+this.age=age;
+} 
+static show()
+{
+return 'The name is '+this.name+' The age is '+this.age;
+}
+}
+
+const ob1=new Student("Darshan",22);
+
+document.getElementById("x").innerHTML = Student.show();
+
+</script>
+</html>
