@@ -1,0 +1,40 @@
+<html>
+<p id=x></p>
+
+<script>
+class Student
+{
+constructor(name,age)
+{
+this.name=name;
+this.age=age;
+} 
+
+
+get sname()
+{
+return this.name;
+}
+
+set sname(z)
+{
+this.name=z;
+}
+
+get sage()
+{
+return this.age;
+}
+
+set sage(y)
+{
+this.age=y;
+}
+}
+
+const ob1=new Student("Darshan",22);
+
+document.getElementById("x").innerHTML = ob1.sname+' '+ob1.sage;
+
+</script>
+</html>
