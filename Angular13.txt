@@ -922,22 +922,25 @@ public product=[
 ];
 public txtName:any; <---global variable (scope through out the program).
 public txtPrice:any;
+
 public NewProduct=
 {
   Name:"",  <--local variable which are inside the function (scope is within the function)
   Price:0
 }
+
 public AddProduct()
 {
   alert('Product Added');
   this.NewProduct={
-    Name:this.txtName,
+    Name:this.txtName,  <--- assigning the gobal variable to local variable.
     Price:this.txtPrice
   };
   this.product.push(this.NewProduct)
   this.txtName='',
   this.txtPrice=0
 }
+
 public DeleteProduct(index:number)
 {
 var status=confirm("Are you sure you want to delete");
