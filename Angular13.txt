@@ -902,7 +902,112 @@ public shoes =
   </div>
 </div>
 -----------------------------------------------------------------------------------------------------
+Example-8
+------------------
+example1.ts
+------------------------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-example1',
+  templateUrl: './example1.component.html',
+  styleUrls: ['./example1.component.css']
+})
+export class Example1Component
+{
+public product=[
+{Name:'Samsung TV',Price:45000.00},
+{Name:'Sony TV',Price:75000.00},
+{Name:'LG TV',Price:35000.00},
+];
+public txtName:any;
+public txtPrice:any;
+public NewProduct=
+{
+  Name:"",
+  Price:0
+}
+public AddProduct()
+{
+  alert('Product Added');
+  this.NewProduct={
+    Name:this.txtName,
+    Price:this.txtPrice
+  };
+  this.product.push(this.NewProduct)
+  this.txtName='',
+  this.txtPrice=0
+}
+public DeleteProduct(index:number)
+{
+var status=confirm("Are you sure you want to delete");
+if(status==true)
+{
+this.product.splice(index,1);
+}
+}
+}
+---------------------------------------------------------------------------
+example1.html
+--------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="AddProduct">
+    <h2>Add New Product</h2>
+    <div class="form-group">
+      <label>Name</label>
+      <div>
+<input [(ngModel)]="txtName" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Price</label>
+        <div>
+  <input [(ngModel)]="txtPrice" type="text" class="form-control">
+        </div>
+    </div>
+  </div>
+  <button (click)="AddProduct()" class="btn btn-success">Add Product</button>
+  </div>
+
+<div>
+<h2>Product List</h2>
+<table>
+<tr><th>Name</th><th>Price </th><th>Action</th></tr>
+<tr *ngFor="let product of product; let i=index"><td>{{product.Name}}</td><td>{{product.Price}}</td>
+<td><button class="btn btn-danger" (click)="DeleteProduct(i)">Delete Product</button></td>
+</tr>
+</table>
+</div>
+</div>
+-------------------------------------------------------------------------------------------
+example1.css
+-------------------------------
+.AddProduct
+{
+  width:300px;
+  border:2px solid darkblue;
+  padding:10px;
+  margin: 20px;
+}
+
+mytable,tr,td,th
+{
+  width:900px;
+  border:2px solid darkblue;
+  padding:10px;
+  margin: 20px;
+}
+---------------------------------------------------------------------------------------
 
 
 
