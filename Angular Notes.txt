@@ -1,4 +1,4 @@
-Angular 8/9/10
+Angular 13
 --------------------------
 1)Angular is an open source,cross platform,
 2)it provides end to end solution for building,debugging,testing and deploying.
@@ -206,13 +206,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwowaybindingComponent  <---app.module.ts (bootstrap)
 {  
- public name = 'Samsung TV';
+ public name = 'Samsung TV';  <----global variable (you can access through out the application)
  public city = 'Delhi';
  public inStock = true;
- public product = {
-   Name: '',
-   City: '',
-   InStock: false
+ public product = {   
+ Name: '',				<---local variables  
+ City: '',
+ InStock: false
  };
  public UpdateClick() {
    this.product = {
@@ -301,9 +301,12 @@ export class IfdemoComponent {
      Price: 4500.55,
      Photo: 'assets/shoe.jpg'
    };
-   public showImage = false;
+  
+ public showImage = false;
    public btnText = 'Show';
-   public TogglePreview() {
+
+   public TogglePreview() 
+{
       this.showImage = (this.showImage==false)?true:false;
       this.btnText = (this.btnText=='Show')?'Hide':'Show';
    }
@@ -362,7 +365,8 @@ export class SwitchdemoComponent{
    };
    public selectedView = 'info';
    public views = ['info', 'preview', 'more'];
-   public ChangeView(obj) {
+   public ChangeView(obj:any)
+ {
       this.selectedView = obj.target.name;
    }
  
