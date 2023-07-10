@@ -1428,8 +1428,67 @@ constructor(calc:Service1Component)
  providers: [Service1Component],
   bootstrap: [CalcServiceComponent]
 -----------------------------------------------------------------
+example-2
+----------------------
+import { Component } from '@angular/core';
+import {Injectable} from '@angular/core'
+@Injectable({
+providedIn:'root'
+})
+export class Service2Component
+{
+public add(...params:number[]):number
+{
+  let result=0;
+  for(let val of params)
+  {
+    result=result+val;
+  }
+  return result;
+}
+public sub(x:number,y:number):number
+{
+  return x-y;
+}
+public mul(x:number,y:number):number
+{
+  return x*y;
+}
+public div(x:number,y:number):number
+{
+  return x/y;
+}
 
-
+}
+-----------------------------------------------------
+import { Component } from '@angular/core';
+import { Service2Component } from '../service2/service2.component';
+@Component({
+  selector: 'app-calculator1',
+  templateUrl: './calculator1.component.html',
+  styleUrls: ['./calculator1.component.css']
+})
+export class Calculator1Component {
+sum:number=0;
+sub:number=0;
+mul:number=0;
+div:number=0;
+constructor(x:Service2Component)
+{
+  this.sum=x.add(44,55,66,77,88);
+  console.log("The sum is "+this.sum);
+  alert("the sum is "+this.sum);
+  this.sub=x.sub(144,55);
+  console.log("The sub is "+this.sub);
+  alert("the sub is "+this.sub);
+}
+}
+-------------------------------------------------------------------------------
+providers: [Service1Component,Service2Component],
+  bootstrap: [Calculator1Component]
+----------------------------------------------------------------
+*Service2Component  it should not be there in declaration.
+---------------------------------------------------------------------------------------------
 
 
 
