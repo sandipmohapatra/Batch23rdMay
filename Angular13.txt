@@ -1321,7 +1321,9 @@ export class AmazonComponent
   {
     this.cartItemsCount = this.cartItems.length;
   }
-  public OnCategoryChange(){
+  
+public OnCategoryChange()
+{
     switch(this.selectedCategoryName)
     {
       case 'Electronics':
@@ -1352,7 +1354,8 @@ export class AmazonComponent
      alert('Item Added to Cart');
      this.GetCartItemsCount();
   }
-  public ToggleCartDisplay() {
+  public ToggleCartDisplay() 
+{
     this.showCart = (this.showCart==false)?true:false;
   }
   public DeleteCartItem(index:any)
@@ -1365,8 +1368,66 @@ export class AmazonComponent
   }
 }
 -----------------------------------------------------------------------------------------------------------------
+Angular Service
+--------------------------
+It is used for creating user-defined business logic which can be used and reused in the application by injecting into any component.
+-------------------------------
+Different between service and function
+------------------------------------------------------
+function is can be used  within a single module .
+were as service can be used multiple modules or a single application (banking application)
+------------------------------------------
+steps to create a service.
+--------------------------------------
+step 1:- we will create a service in a separte module.
+step 2:- We will inject it to a component and use it.
 
-
+1)import {Injectable} from '@angular/core'
+2)@Injectable()
+3)providedIn:'root'
+---------------------------------------------------------------------------------------
+calculator.service.ts
+--------------------------------------------
+import { Component } from '@angular/core';
+import {Injectable} from '@angular/core'
+@Injectable({
+providedIn:'root'
+})
+export class Service1Component
+{
+public add(...params:number[]):number
+{
+  let result=0;
+  for(let val of params)
+  {
+    result=result+val;
+  }
+  return result;
+}
+}
+-------------------------------------------------------
+create a module calculator
+---------------------------------------------
+import { Component } from '@angular/core';
+import { Service1Component } from '../service.component';
+@Component({
+  selector: 'app-calc-service',
+  templateUrl: './calc-service.component.html',
+  styleUrls: ['./calc-service.component.css']
+})
+export class CalcServiceComponent {
+sum:number=0;
+constructor(calc:Service1Component)
+{
+  this.sum=calc.add(55,66,77,88,99);
+  console.log("The sum is "+this.sum);
+  alert("The sum is "+this.sum);
+}
+}
+-----------------------------------------------------------------------------------
+ providers: [Service1Component],
+  bootstrap: [CalcServiceComponent]
+-----------------------------------------------------------------
 
 
 
