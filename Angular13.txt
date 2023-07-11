@@ -1839,3 +1839,66 @@ export class KeyeventComponent
   box-shadow: 2px 3px 4px green;
 }
 ---------------------------------------------------------------------------
+Lifecycle hook of Angular.
+--------------------------------------------
+ngOnChanges - When the value of a data bound property changes, then this method is called.
+
+ngOnInit - This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.
+
+ngDoCheck - This is for the detection and to act on changes that Angular can't or won't detect on its own.
+
+ngAfterContentInit - This is called in response after Angular projects external content into the component's view.
+
+ngAfterContentChecked - This is called in response after Angular checks the content projected into the component.
+
+ngAfterViewInit - This is called in response after Angular initializes the component's views and child views.
+
+ngAfterViewChecked - This is called in response after Angular checks the component's views and child views.
+
+ngOnDestroy - This is the cleanup phase just before Angular destroys the directive/component.
+      
+example of implementing one lifecycle hook. 
+ app.component.ts 
+-----------------------------------------------------------------
+import {    Component } from '@angular/core';  
+@Component ({ 
+   selector: 'my-app', 
+   template: '<div> {{values}} </div> ' 
+}) 
+export class AppComponent { 
+   values = ' '; 
+   ngOnInit() { 
+      this.values = "Hello"; 
+   } 
+--------------------------------------------------------------------------------------------------------------
+PPTs
+1)data binding
+2)component to component communication
+3)life cycle hook.
+4)directives in angular
+--------------------------------------------
+In Angular, directives are one of the fundamental building blocks used to extend and modify the behavior of HTML elements. They allow you to attach custom functionality to existing HTML elements or create reusable components. Angular provides several types of directives:
+
+Component Directives: Components are the most common type of directive in Angular. They are used to create reusable UI components with their own templates, styles, and behavior. Components have a view associated with them and encapsulate the HTML, CSS, and logic for that particular component.
+
+Structural Directives: Structural directives modify the structure of the DOM by adding or removing elements. They are denoted by an asterisk (*) prefix in the template and are used to conditionally render or repeat elements. Examples of structural directives in Angular include ngIf, ngFor, and ngSwitch.
+
+Attribute Directives: Attribute directives modify the behavior or appearance of an element, component, or another directive. They are used to apply custom logic or styles to HTML elements. Attribute directives can be used to create custom validations, control visibility, handle events, and more. Examples of attribute directives in Angular include ngClass, ngStyle, and ngModel.
+
+Custom Directives: In addition to the built-in directives provided by Angular, you can also create your own custom directives. Custom directives allow you to encapsulate reusable behavior and apply it to elements in your application. You can create custom attribute directives or custom structural directives depending on your requirements.
+
+To use a directive in Angular, you typically import it into your module or component and apply it to the HTML element using the appropriate syntax. For example, to use the ngIf structural directive to conditionally render an element based on a condition, you would use the following syntax:
+
+<div *ngIf="condition">Content to be rendered</div>
+Here, *ngIf is the directive, and condition is a boolean expression that determines whether the element should be rendered or not.
+
+Overall, directives are a powerful feature in Angular that enable you to create dynamic, reusable, and interactive components for your application.
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
