@@ -1636,6 +1636,44 @@ we have some directives to validate a form
 5)NgInvalid:- it returns true if any input validations are invalid.
 6)NgErrors:-It is an object that collects all errors of input field.
 *required,Minlength,Maxlength,pattern,email validation.
+------------------------------------------------------------------------------------------------------------------------------
+7)NgModel:- dynamic element.it is model who's value is changed dynamically.
+example:- <input type="text" [(ngModel)]="username">
+8)NgClass:-dynamic assignment of css class.we can change the html element dynamically.
+example:-<div[ngClass]=" 'cssClassName' "> Your text </div>
+9)NgStyle:-it is defined inline style for html element.
+it will applied to single line.
+example:- <img [ngStyle]="styleObj" src="asserts/shoe.jpg" width="50" height="50">
+10)*ngIf :- It is used for if condition .
+example
+<div *ngIf="showImage">
+<img [src]="product.Photo" height="300" width="300">
+<img src="./assets/shoe.jpg" height="300" width="300">
+</div>
+11)*ngFor :- It is used for iterating the data
+example:-
+<tr *ngFor="let item of cartItems;">
+                        <td>{{item.Name}}</td>
+                        <td>{{item.Price}}</td>
+                        <td><img width="50" height="50" [src]="item.Photo"></td>
+                        <td>
+12)*ngSwitch:- In this according to the user switch the control will jump to corresponding case.
+ switch(this.selectedCategoryName)
+    {
+      case 'Electronics':
+        this.products = this.electronics;
+        break;
+      case 'Footwear':
+        this.products = this.footwear;
+        break;
+      case 'Fashion':
+        this.products = this.fashion;
+        break;
+      default:
+        this.products = ['Select a Category'];
+        break;
+    }
+
 --------------------------------------------------------------------------------------------------------------------------
 example-13
 -----------------------
