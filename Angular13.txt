@@ -1626,6 +1626,73 @@ export class EventDemoComponent
 </div>
 </body>
 -----------------------------------------------------------------------------------------------------------------
+Form Validation
+-----------------------------
+we have some directives to validate a form
+1)NgDirty :- It returns true when the value of the form element is modified.
+2)NgTouched:- It returns true when the element get focus.
+3)NgUntouched:- It returns true when the element never get focus.
+4)NgValid:- it returns true if all input validations are valid.
+5)NgInvalid:- it returns true if any input validations are invalid.
+6)NgErrors:-It is an object that collects all errors of input field.
+*required,Minlength,Maxlength,pattern,email validation.
+--------------------------------------------------------------------------------------------------------------------------
+example-13
+-----------------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-valid',
+  templateUrl: './valid.component.html',
+  styleUrls: ['./valid.component.css']
+})
+export class ValidComponent {
+
+}
+--------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+
+  <form #frmRegister="ngForm">
+    <dl>
+        <h2>Register User</h2>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" name="txtName" ngModel #txtName="ngModel" class="form-control" required>
+      <span *ngIf="frmRegister.submitted && txtName.invalid || txtName.touched && txtName.invalid" class="text-danger">Name Required</span>
+        </dd>
+        <dt>Mobile</dt>
+        <dd>
+            <input type="text" name="txtMobile" ngModel #txtMobile="ngModel" class="form-control" required>
+            <span *ngIf="frmRegister.submitted && txtMobile.invalid || txtMobile.touched && txtMobile.invalid" class="text-danger">Mobile Required</span>
+        </dd>
+        <dt>Adhar Number</dt>
+        <dd>
+            <input type="text" name="txtAdhar" ngModel #txtAdhar="ngModel" class="form-control" required>
+            <span *ngIf="frmRegister.submitted && txtAdhar.invalid || txtAdhar.touched && txtAdhar.invalid" class="text-danger">Adhar Number Required</span>
+        </dd>
+
+        <dt>Password</dt>
+        <dd>
+            <input type="password" name="txtPass" ngModel #txtPass="ngModel" class="form-control" required>
+            <span *ngIf="frmRegister.submitted && txtPass.invalid || txtPass.touched && txtPass.invalid" class="text-danger">Password Required</span>
+        </dd><br>
+
+        <button class="btn btn-primary btn-block">Register</button>
+    </dl>
+  </form>
+</div>
+</body>
+-------------------------------------------------------------------------------------------------------------------------------------
 
 
