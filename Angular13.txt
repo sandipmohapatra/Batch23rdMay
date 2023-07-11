@@ -1489,10 +1489,89 @@ providers: [Service1Component,Service2Component],
 ----------------------------------------------------------------
 *Service2Component  it should not be there in declaration.
 ---------------------------------------------------------------------------------------------
+example:-capcha program
+------------------------------------------
+import { Injectable } from '@angular/core';
 
+@Injectable({
+    providedIn: 'root'
+})
+export class CaptchaService
+{
+    public GenerateCode() {
+        let a = Math.random() * 10;   
+        let b = Math.random() * 10;
+        let c = Math.random() * 10;
+        let d = Math.random() * 10;
+        let e = Math.random() * 10;
+        let f = Math.random() * 10;
+        let code = `${Math.round(a)} ${Math.round(b)} ${Math.round(c)} ${Math.round(d)} ${Math.round(e)} ${Math.round(f)}`;
+        return code;
+    }
+}
+------------------------------------------------------------------------------------------------
+import { Component } from '@angular/core';
+import {CaptchaService} from '../service3';
 
+@Component({
+  selector: 'app-caplogin',
+  templateUrl: './caplogin.component.html',
+  styleUrls: ['./caplogin.component.css']
+})
+export class CaploginComponent 
+{
+  constructor(private x: CaptchaService)
+  {}
+  public code = this.x.GenerateCode();
 
-
+  public refreshClick()
+  {
+      this.code = this.x.GenerateCode();
+  }
+}
+--------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="form-group">
+  <label>User Name</label>
+  <div>
+      <input type="text" class="form-control">
+  </div>
+ </div>
+ <div class="form-group">
+  <label>Password</label>
+  <div>
+      <input type="password" class="form-control">
+  </div>
+ </div>
+ <div class="form-group">
+    <label>Verify Code</label>
+    <div>
+        {{code}} <button (click)="refreshClick()" class="btn"><span class="fa fa-sync"></span>Refresh</button>
+    </div>
+    <div>
+        <input type="text" class="form-control">
+    </div>
+ </div>
+ <div class="form-group">
+    <button class="btn btn-primary btn-block">Login</button>
+ </div>
+</div>
+</body>
+--------------------------------------------------------------------------------------------------------------
+providers: [CaptchaService],
+bootstrap: [CaploginComponent]
+---------------------------------------------------------------------------
 
 
 
