@@ -1694,5 +1694,110 @@ export class ValidComponent {
 </div>
 </body>
 -------------------------------------------------------------------------------------------------------------------------------------
+example-13
+----------------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-keyevent',
+  templateUrl: './keyevent.component.html',
+  styleUrls: ['./keyevent.component.css']
+})
+export class KeyeventComponent
+{
+  public users = [
+    {UserName: 'john'},
+    {UserName: 'john12'},
+    {UserName: 'john_nit'},
+    {UserName: 'david'}
+  ];
+  public userName:any;
+  public userMsg:any;
+  public isUserValid = false;
+  public isUserInvalid = false;
 
+  public password:any;
+  public showCapsWarning = false;
+
+  public VerifyUserOnKeyUp(){
+    if (this.userName.length < 3) {
+      this.userMsg = 'User Name too short..';
+      this.isUserInvalid = true;
+      this.isUserValid = false;
+    } else {
+      for(var item of this.users)
+ {
+        if(item.UserName == this.userName)
+{
+          this.userMsg = 'User Name Taken - Try Another';
+          this.isUserInvalid = true;
+          this.isUserValid = false;
+          break;
+        } else {
+          this.userMsg = 'User Name Available';
+          this.isUserInvalid = false;
+          this.isUserValid = true;
+        }
+      }
+    }
+  }
+  public VerifyPassword(e:any)
+  {
+      if(e.keyCode>=65 && e.keyCode<=90)
+{
+          this.showCapsWarning = true;
+      } else {
+        this.showCapsWarning = false;
+      }
+  }
+}
+------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+  <h2>Register User</h2>
+  <div class="form-group">
+    <label>User Name</label>
+    <div>
+        <input [ngClass]="{'errorStyle':isUserInvalid, 'validStyle':isUserValid}" (keyup)="VerifyUserOnKeyUp()" [(ngModel)]="userName" type="text" class="form-control">
+        <span [ngClass]="{'text-success':isUserValid, 'text-danger':isUserInvalid}">{{userMsg}}</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <div>
+        <input (keypress)="VerifyPassword($event)" [(ngModel)]="password" type="password" class="form-control">
+        <div *ngIf="showCapsWarning">
+            <span class="fa fa-exclamation-triangle text-warning"></span>
+            <span class="text-warning">Warning CAPS is ON</span>
+        </div>
+    </div>
+  </div>
+</div>
+</body>
+---------------------------------------------------------------------------------------------
+.container-fluid {
+  margin:auto;
+  padding:20px;
+  width:300px;
+  align-items: center;
+  justify-content: center;
+}
+.errorStyle {
+  border:1px solid red;
+  box-shadow: 2px 3px 4px red;
+}
+.validStyle {
+  border:1px solid green;
+  box-shadow: 2px 3px 4px green;
+}
+---------------------------------------------------------------------------
