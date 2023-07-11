@@ -1894,7 +1894,34 @@ Here, *ngIf is the directive, and condition is a boolean expression that determi
 
 Overall, directives are a powerful feature in Angular that enable you to create dynamic, reusable, and interactive components for your application.
 --------------------------------------------------------------------------------------------------------------
+Life cycle hook
+--------------------------
+In Angular, lifecycle hooks are methods provided by Angular that allow you to tap into specific moments during the life cycle of a component or directive. These hooks provide a way to perform actions at key points in the component's life cycle, such as initialization, change detection, destruction, etc. Here are the most commonly used lifecycle hooks in Angular:
 
+ngOnInit: This hook is called after Angular has initialized the component's properties and set the input properties. It is commonly used for initialization tasks, such as retrieving data from a server or initializing variables.
+
+ngOnChanges: This hook is called when one or more of the component's input properties have changed. It receives a SimpleChanges object that contains the previous and current values of the input properties. It is commonly used to respond to input property changes and perform actions based on the new values.
+
+ngAfterViewInit: This hook is called after Angular has fully initialized the component's view and child views. It is commonly used to perform initialization tasks that require access to the component's view, such as accessing ViewChild elements or manipulating the DOM.
+
+ngOnDestroy: This hook is called just before Angular destroys the component. It is commonly used for cleanup tasks, such as unsubscribing from observables, cancelling timers, or releasing resources.
+
+ngDoCheck: This hook is called during every change detection cycle and allows you to implement your own custom change detection logic. It is commonly used when you need fine-grained control over change detection and want to optimize performance.
+
+ngAfterContentInit: This hook is called after Angular has projected external content into the component's view. It is commonly used when working with content projection and need to perform initialization tasks on projected content.
+
+ngAfterContentChecked: This hook is called after Angular has checked the component's projected content for changes. It is commonly used when you need to perform actions after the content has been checked for changes.
+
+ngAfterViewChecked: This hook is called after Angular has checked the component's view and child views for changes. It is commonly used when you need to perform actions after the view has been checked for changes.
+
+These are some of the major lifecycle hooks available in Angular. By implementing these hooks in your components or directives, you can control and respond to different stages of their life cycle, allowing you to perform specific actions at the appropriate moments.
+------------------------------------------------------------------------------------
+
+
+
+
+
+ 
 
 
 
