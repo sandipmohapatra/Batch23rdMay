@@ -1674,7 +1674,7 @@ export class ValidComponent {
         <dt>Mobile</dt>
         <dd>
             <input type="text" name="txtMobile" ngModel #txtMobile="ngModel" class="form-control" required>
-            <span *ngIf="frmRegister.submitted && txtMobile.invalid || txtMobile.touched && txtMobile.invalid" class="text-danger">Mobile Required</span>
+            <span *ngIf="frmRegister.submitted && txtMobile.invalid || txtMobile.touched && txtMobile.invalid" class="text-danger">Mobile Number Required</span>
         </dd>
         <dt>Adhar Number</dt>
         <dd>
