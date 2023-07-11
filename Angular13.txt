@@ -1572,6 +1572,60 @@ export class CaploginComponent
 providers: [CaptchaService],
 bootstrap: [CaploginComponent]
 ---------------------------------------------------------------------------
+example-12
+------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-event-demo',
+  templateUrl: './event-demo.component.html',
+  styleUrls: ['./event-demo.component.css']
+})
+export class EventDemoComponent
+{
+  public msg:any;
+  public txtName:any;
+  public OnFocus() {
+    this.msg = 'Name in Block Letters';
+  }
+  public OnBlur() {
+    this.msg = '';
+    this.txtName = this.txtName.toUpperCase();
+  }
+  public onCut(){
+    this.msg = 'Removed and Placed on Clipboard';
+  }
+  public onCopy(){
+    this.msg = 'Copied to Clipboard';
+  }
+  public onPaste() {
+    this.msg = 'Inserted from Clipboard';
+  }
+}
+--------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+  <h2>Register for Cut/copy/paste</h2><hr>
+  <div class="form-group">
+      <label>User Name</label>
+      <div>
+          <input (cut)="onCut()" (copy)="onCopy()" (paste)="onPaste()" [(ngModel)]="txtName" (focus)="OnFocus()" (blur)="OnBlur()" class="form-control" type="text" placeholder="Block Letters Only">
+          <span>{{msg}}</span>
+      </div>
+  </div>
+</div>
+</body>
+-----------------------------------------------------------------------------------------------------------------
 
 
 
