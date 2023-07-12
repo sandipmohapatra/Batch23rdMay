@@ -1,0 +1,473 @@
+What is Angular?
+a) A programming language
+b) A JavaScript framework
+c) A database management system
+d) A markup language
+
+Which command is used to create a new Angular project in Angular 13?
+a) ng new
+b) ng create
+c) ng generate
+d) ng start
+
+What is the file extension for an Angular component template file?
+a) .js
+b) .html
+c) .css
+d) .ts
+
+Which Angular version introduced the Ivy renderer?
+a) Angular 9
+b) Angular 10
+c) Angular 11
+d) Angular 12
+
+Which decorator is used to define a component in Angular?
+a) @Component
+b) @Directive
+c) @Module
+d) @Injectable
+
+What is the purpose of Angular CLI?
+a) To provide a development server for Angular applications
+b) To generate code scaffolding and automate development tasks
+c) To handle HTTP requests in Angular applications
+d) To manage state in Angular applications
+
+Which module is required to use Angular's HttpClient for making HTTP requests?
+a) @angular/common
+b) @angular/core
+c) @angular/forms
+d) @angular/http
+
+Which operator is used to handle asynchronous operations in Angular?
+a) map
+b) filter
+c) subscribe
+d) async
+
+What is the purpose of Angular's NgModule?
+a) To define routing configuration
+b) To bootstrap the application
+c) To declare and organize components, directives, and pipes
+d) To handle form validations
+
+Which Angular feature is used to create reusable UI components?
+a) Directives
+b) Services
+c) Modules
+d) Components
+
+Answers:
+
+b) A JavaScript framework
+a) ng new
+b) .html
+c) Angular 11
+a) @Component
+b) To generate code scaffolding and automate development tasks
+a) @angular/common
+c) subscribe
+c) To declare and organize components, directives, and pipes
+d) Components
+
+------------------------------------------
+Sure! Here are some multiple-choice questions (MCQs) related to Angular 13:
+
+Which version of Angular introduced the Ivy rendering engine?
+a. Angular 10
+b. Angular 11
+c. Angular 12
+d. Angular 13
+
+Which command is used to create a new Angular project?
+a. ng new
+b. npm new
+c. create-angular
+d. angular create
+
+What is the purpose of the NgModule decorator in Angular?
+a. It defines the metadata for a component.
+b. It defines a module and its dependencies.
+c. It defines a route in the application.
+d. It defines a service provider.
+
+Which file contains the main component of an Angular application?
+a. main.ts
+b. app.module.ts
+c. app.component.ts
+d. index.html
+
+Which operator is used to handle asynchronous operations in Angular?
+a. async
+b. subscribe
+c. await
+d. pipe
+
+How do you define a two-way data binding in Angular?
+a. [(ngModel)]
+b. {{ngModel}}
+c. [(model)]
+d. {{model}}
+
+What is the purpose of the ngFor directive in Angular?
+a. It creates a new component.
+b. It defines a route in the application.
+c. It repeats a section of HTML for each item in an iterable.
+d. It handles user input events.
+
+Which file is used to define the routing configuration in Angular?
+a. app.component.ts
+b. app.module.ts
+c. index.html
+d. app-routing.module.ts
+
+Which command is used to start the Angular development server?
+a. ng serve
+b. npm start
+c. ng start
+d. start-angular
+
+Which Angular feature allows lazy loading of modules?
+a. Services
+b. Directives
+c. Components
+d. Routing
+
+Answers:
+
+c. Angular 12
+a. ng new
+b. It defines a module and its dependencies.
+c. app.component.ts
+b. subscribe
+a. [(ngModel)]
+c. It repeats a section of HTML for each item in an iterable.
+d. app-routing.module.ts
+a. ng serve
+d. Routing
+
+----------------------------------------------
+Sure! Here are some multiple-choice questions (MCQs) related to Angular 13:
+
+Which version of Angular introduced the "strict" mode for TypeScript strict type-checking?
+a) Angular 8
+b) Angular 10
+c) Angular 12
+d) Angular 13
+
+What is the command to create a new Angular project with the Angular CLI?
+a) ng new project-name
+b) ng create project-name
+c) ng init project-name
+d) ng generate project-name
+
+Which Angular feature is used to handle asynchronous operations?
+a) Observables
+b) Promises
+c) Async/Await
+d) Callbacks
+
+Which file is used to configure the routing in an Angular application?
+a) app.module.ts
+b) app.component.ts
+c) app.routing.ts
+d) app.routes.ts
+
+In Angular, what does "ngOnInit" lifecycle hook represent?
+a) It is called once after the component is initialized.
+b) It is called once before the component is destroyed.
+c) It is called whenever there is a change detection cycle.
+d) It is called whenever the component's inputs change.
+
+How can you pass data from a parent component to a child component in Angular?
+a) Using @Input decorator
+b) Using @Output decorator
+c) Using EventEmitter
+d) Using ViewChild decorator
+
+Which Angular CLI command is used to generate a new component?
+a) ng generate component component-name
+b) ng new component component-name
+c) ng create component component-name
+d) ng add component component-name
+
+What is the purpose of Angular's "FormsModule"?
+a) It enables two-way data binding in Angular forms.
+b) It provides built-in validation for Angular forms.
+c) It handles form submission and data persistence.
+d) It manages the form's state and synchronization.
+
+Which Angular module is used for making HTTP requests?
+a) HttpClientModule
+b) HttpModule
+c) HttpServiceModule
+d) HttpRequestsModule
+
+Which operator is used in Angular to unsubscribe from an observable?
+a) take
+b) map
+c) switchMap
+d) unsubscribe
+
+Answers:
+
+d) Angular 13
+a) ng new project-name
+a) Observables
+c) app.routing.ts
+a) It is called once after the component is initialized.
+a) Using @Input decorator
+a) ng generate component component-name
+a) It enables two-way data binding in Angular forms.
+a) HttpClientModule
+d) unsubscribe
+------------------------------------------------
+Sure! Here are some multiple-choice questions (MCQs) about Angular 13:
+
+Which version of Angular introduced the Ivy compiler and runtime?
+a) Angular 9
+b) Angular 10
+c) Angular 11
+d) Angular 12
+e) Angular 13
+
+What is the command to create a new Angular project using the Angular CLI?
+a) ng init my-app
+b) ng new my-app
+c) ng generate my-app
+d) ng create my-app
+e) ng start my-app
+
+Which of the following is the correct syntax to define two-way data binding in Angular?
+a) {{ value }}
+b) [(value)]
+c) [value]
+d) (value)
+e) {{ value }}
+
+Which Angular feature allows you to define reusable HTML templates?
+a) Components
+b) Modules
+c) Services
+d) Directives
+e) Pipes
+
+Which of the following is used to handle HTTP requests in Angular?
+a) HttpClientModule
+b) HttpClient
+c) HttpModule
+d) HttpService
+e) HttpInterceptor
+
+Which Angular module is used for handling forms and form validation?
+a) FormsModule
+b) ReactiveFormsModule
+c) FormModule
+d) NgFormModule
+e) FormBuilderModule
+
+Which operator is used to subscribe to an Observable in Angular?
+a) .subscribe()
+b) .pipe()
+c) .map()
+d) .filter()
+e) .take()
+
+Which Angular concept is used to create a communication channel between parent and child components?
+a) Services
+b) Directives
+c) Modules
+d) Event emitters
+e) Dependency injection
+
+Which Angular command is used to start a local development server?
+a) ng serve
+b) ng start
+c) ng run
+d) ng build
+e) ng deploy
+
+Which feature allows you to lazy load Angular modules?
+a) Lazy loading
+b) Route guards
+c) LazyModules
+d) RouterModule
+e) loadChildren
+
+Answers:
+
+d) Angular 12
+b) ng new my-app
+b) [(value)]
+d) Directives
+b) HttpClient
+b) ReactiveFormsModule
+a) .subscribe()
+d) Event emitters
+a) ng serve
+e) loadChildren
+--------------------------------------------------
+Sure, here are some multiple-choice questions (MCQs) related to Angular 13:
+
+What is Angular 13?
+a) A programming language
+b) A framework for building web applications
+c) A database management system
+d) A text editor
+
+Which version of TypeScript is supported in Angular 13?
+a) TypeScript 2.8
+b) TypeScript 3.2
+c) TypeScript 4.4
+d) TypeScript 5.0
+
+What is the command to create a new Angular project in version 13?
+a) ng create my-app
+b) ng new my-app
+c) ng generate my-app
+d) ng init my-app
+
+Which of the following is a new feature in Angular 13?
+a) Improved performance with Ahead-of-Time (AOT) compilation
+b) Support for server-side rendering (SSR)
+c) Built-in support for Angular Material
+d) Enhanced error handling with detailed error messages
+
+What is the purpose of the Angular router in version 13?
+a) To handle HTTP requests
+b) To manage state in the application
+c) To navigate between different views or components
+d) To perform unit testing in Angular applications
+
+What is the file extension for Angular component files?
+a) .html
+b) .css
+c) .ts
+d) .component
+
+Which of the following decorators is used to define a component in Angular 13?
+a) @NgModule
+b) @Component
+c) @Injectable
+d) @Directive
+
+What is the purpose of Angular CLI (Command Line Interface)?
+a) To create and manage Angular projects
+b) To execute JavaScript code in the browser
+c) To perform linting and code formatting
+d) To debug Angular applications
+
+Which module is responsible for handling HTTP requests in Angular 13?
+a) CommonModule
+b) HttpClientModule
+c) FormsModule
+d) RouterModule
+
+How can you pass data from a parent component to a child component in Angular 13?
+a) Using services
+b) Using input properties
+c) Using output properties and event emitters
+d) Using template variables
+
+Answers:
+
+b) A framework for building web applications
+c) TypeScript 4.4
+b) ng new my-app
+d) Enhanced error handling with detailed error messages
+c) To navigate between different views or components
+c) .ts
+b) @Component
+a) To create and manage Angular projects
+b) HttpClientModule
+b) Using input properties
+------------------------------------------------
+Sure! Here are some multiple-choice questions (MCQs) about Angular 13:
+
+Which version of Angular introduced the Ivy rendering engine?
+a) Angular 9
+b) Angular 10
+c) Angular 11
+d) Angular 12
+
+Which command is used to generate a new Angular component?
+a) ng new
+b) ng generate
+c) ng add
+d) ng create
+
+Which file is used to configure routing in an Angular application?
+a) app.module.ts
+b) index.html
+c) app.component.ts
+d) app-routing.module.ts
+
+What is the purpose of the "ngOnInit" method in an Angular component?
+a) It is called after the component is created and initialized.
+b) It is called when the component is about to be destroyed.
+c) It is called when the component receives input data from its parent.
+d) It is called when the component is being rendered on the screen.
+
+Which decorator is used to define a property as an input in Angular?
+a) @ViewChild
+b) @HostListener
+c) @Input
+d) @Output
+
+Which CLI command is used to start the Angular development server?
+a) ng build
+b) ng serve
+c) ng run
+d) ng test
+
+Which module is responsible for handling HTTP requests in Angular?
+a) FormsModule
+b) HttpClientModule
+c) ReactiveFormsModule
+d) RouterModule
+
+What is the purpose of the "ngFor" directive in Angular?
+a) It is used to create a new component.
+b) It is used to iterate over a collection and render multiple elements.
+c) It is used to define a route in the application.
+d) It is used to handle form submissions.
+
+Which module provides support for lazy loading in Angular?
+a) CommonModule
+b) BrowserModule
+c) RouterModule
+d) HttpClientModule
+
+Which operator is used for data binding in Angular?
+a) *
+b) |
+c) !
+d) ?
+
+Answers:
+
+d) Angular 12
+b) ng generate
+d) app-routing.module.ts
+a) It is called after the component is created and initialized.
+c) @Input
+b) ng serve
+b) HttpClientModule
+b) It is used to iterate over a collection and render multiple elements.
+c) RouterModule
+d) ?
+
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
