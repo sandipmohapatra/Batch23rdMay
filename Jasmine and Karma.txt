@@ -219,7 +219,7 @@ describe("factorial",function(){
     });
     });
 ------------------------------------------------------------------------------
-toBe():- It is similar to toEqual() but it matches with the string type or Object type.
+toBe():- It is similar to toEqual() but it matches with the string type or Object type content.
 ----------------------------------
 example-6
 ----------------------
@@ -253,9 +253,32 @@ describe("Example of not.toBe",function()
     });
 });
 --------------------------------------------------------------------------
-
-
-
+Difference between toEqual() and toBe()
+-----------------------------------------------------------------------------
+example-8
+---------------------
+var spot = { name: "Sandip Kumar",Rollno: 101 };
+var cosmo ={ name: "Sandip Kumar",Rollno: 101 };
+-------------------------------------------------
+describe("Example of not.toBe() and toEqual()",function()
+{
+    it("This is an example of toequal method",function()
+    {
+        expect(spot).toEqual(cosmo); 
+        // success; equivalent or content of object are same
+        
+    });
+    it("This is an example of toBe method",function()
+    {
+        expect(spot).toBe(cosmo);     // failure; not the same object
+        
+    });
+    it("This is an example of toBe method",function()
+    {
+        expect(spot).toBe(spot);  //success because the objects are same 
+    });
+});
+-------------------------------------------------------------------------------------------------------------
 
 
 
