@@ -153,3 +153,34 @@ expect(cal.div(6,3)).toEqual(2);
 });
 });
 --------------------------------------------------------------------------------
+example-4
+----------------------
+factorial =function() {};
+
+factorial.prototype.fac=function(number1)
+{
+let ans=1;
+for(var i=number1;i>=1;i--)
+{
+ans=ans*i;
+}
+return ans;
+}
+----------------------------------------------------------------------------------
+describe("factorial",function(){
+var fact;
+beforeEach(function()
+{
+fact=new factorial();
+});
+
+describe("we use the factorial to do a factor operations", function()
+{
+it("should be able to find factorial of 4 ",function()
+{
+expect(fact.fac(4)).toEqual(23);
+});
+});
+});
+---------------------------------------------------------------------------------
+
