@@ -178,9 +178,94 @@ describe("we use the factorial to do a factor operations", function()
 {
 it("should be able to find factorial of 4 ",function()
 {
-expect(fact.fac(4)).toEqual(23);
+expect(fact.fac(4)).toEqual(24);
 });
 });
 });
 ---------------------------------------------------------------------------------
+toEqual():-It is simplest matcher present in the jasmin inbuilt library.
+It checks that the result of the operation matches with the expected result or not.
+-------------------------------------------------------------------------------------------------------
+not.toEqual():- It is opposite to toEqual(). 
+It checks that the result of the operation matches with the expected result or not.
+-----------------------------------------------------------------------
+example-5
+--------------------
+factorial =function() {};
+
+factorial.prototype.fac=function(number1)
+{
+let ans=1;
+for(var i=number1;i>=1;i--)
+{
+ans=ans*i;
+}
+return ans;
+}
+----------------------------------------
+describe("factorial",function(){
+    var fact;
+    beforeEach(function()
+    {
+    fact=new factorial();
+    });
+    
+    describe("we use the factorial to do a factor operations not equal to", function()
+    {
+    it("should be able to find factorial of 4 ",function()
+    {
+    expect(fact.fac(4)).not.toEqual(23);
+    });
+    });
+    });
+------------------------------------------------------------------------------
+toBe():- It is similar to toEqual() but it matches with the string type or Object type.
+----------------------------------
+example-6
+----------------------
+window.x={
+    name:"sandip",
+    name1:"sandip"
+};
+--------------------------------------------------------
+describe("Example of toBe",function()
+{
+    it("This is an example of toBe method",function()
+    {
+        expect(x.name).toBe(x.name1);
+    });
+});
+--------------------------------------------------------------------------
+not.toBe():- It is opposite to toBe() but it matches with the string type or Object type.
+--------------------------------------------------------------
+example-7
+-------------------------
+window.x={
+    name:"sandip",
+    name1:"pawan"
+};
+--------------------------------------------------------
+describe("Example of not.toBe",function()
+{
+    it("This is an example of not.toBe method",function()
+    {
+        expect(x.name).not.toBe(x.name1);
+    });
+});
+--------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
