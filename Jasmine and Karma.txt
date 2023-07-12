@@ -1,0 +1,63 @@
+Jasmine and Karma
+--------------------------------
+1)They are open source javascript framework capable to test any kind of javascript application.
+2)They follows BDD (Behavior Driven Development ) procedure to ensure that each in javascript statement is properly unit tested.
+3)Jasmine provides a small syntax to test the smallest unit of the application.
+4)In unit testing we test small function part by part instead of testing the whole application.
+-------------------------------------------------------------------------------------------------------------------------------
+How to install jasmine software to do the testing
+-------------------------------------------------------------------
+1)download jasmine from the official website:-
+https://github.com/jasmine/jasmine/releases
+2)we have to download the standalone version
+------------------------------
+ example-1
+---------------------
+test1.js
+--------------------
+var helloworld=function()
+{
+    return 'Hello welcome to Jasmine';
+};
+------------------------------
+spect1.js
+-------------------------
+describe("Hello welcome to Jasmine",function()
+{
+    it("should return Hello welcome to Jasmine",function()
+    {
+        expect(helloworld()).toEqual('Hello welcome to Jasmine');
+    });
+});
+--------------------------------------------
+SpecRunner.html
+---------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v5.0.1</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-5.0.1/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-5.0.1/jasmine.css">
+
+  <script src="lib/jasmine-5.0.1/jasmine.js"></script>
+  <script src="lib/jasmine-5.0.1/jasmine-html.js"></script>
+  <script src="lib/jasmine-5.0.1/boot0.js"></script>
+  <!-- optional: include a file here that configures the Jasmine env -->
+  <script src="lib/jasmine-5.0.1/boot1.js"></script>
+
+  <!-- include source files here... -->
+  <script src="src/test1.js"></script>
+  
+
+  <!-- include spec files here... -->
+  <script src="spec/spect1.js"></script>
+  
+
+</head>
+
+<body>
+</body>
+</html>
+------------------------------------------------------------------------------------------
