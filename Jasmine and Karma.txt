@@ -421,6 +421,29 @@ expect(3.41).toBeCloseTo(3.4,1);
 });
 });
 --------------------------------------------------------------------------------------------------
+example-14
+-------------------
+toMatch():- It is mainly used to match two strings.
+Actually it checks it a specific string is present in the other string.
+example:- str1="My name is sandip"
+str2="My name" 
+str2 is prsent inside the str1;
+-----------------------------------------------------------------------------------------------------------------------
+describe("To checks it a specific string is present in the other string.",function()
+{
+it("This is an example of find if the specific string is present in the other string. ",function()
+{
+expect("My name is sandip").toMatch(/My name/);
+});
+});
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
