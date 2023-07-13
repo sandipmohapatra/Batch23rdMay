@@ -482,11 +482,49 @@ expect(x).toBeNull();
 });
 });
 ---------------------------------------------------------------------------------------
+example -18
+------------------------
+toBeGreaterThan():- It is applicable to numbers only.
+It is used to check the number is greater then the other number or not.
+---------------------------------------
+describe("It is used to check the number is greater then the other number or not ",function()
+{
+it("It is used to check the number is greater then the other number or not ",function()
+{
+var x=8;
+expect(x).toBeGreaterThan(5);
+});
+});
 
+-------------------------------------------------------------------------------------------------------
+example -19
+------------------------
+toBeLessThan():- It is applicable to numbers only.
+It is used to check the number is less then other number or not.
+---------------------------------------
+describe("It is used to check the number is less then the other number or not ",function()
+{
+it("It is used to check the number is less then the other number or not ",function()
+{
+var x=8;
+expect(x).toBeLessThan(15);
+});
+});
 
+-------------------------------------------------------------------------------------------------------
+toBeNAN:- to check the output is not a number.
+example :- 6/6=1;0/0=infinity here the output will be NAN.
+---------------------------
+describe("to check the output is not a number ",function()
+{
+it("to check the output is not a number",function()
+{
 
-
-
+var x=0/0;
+expect(x).toBeNaN();
+});
+});
+--------------------------------------------------------------------------------------------------------
 
 
 
