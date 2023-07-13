@@ -1916,9 +1916,37 @@ ngAfterViewChecked: This hook is called after Angular has checked the component'
 
 These are some of the major lifecycle hooks available in Angular. By implementing these hooks in your components or directives, you can control and respond to different stages of their life cycle, allowing you to perform specific actions at the appropriate moments.
 ------------------------------------------------------------------------------------
+<input type="text" id="name" name="name" class="form-control"
+      required minlength="4" appForbiddenName="bob"
+      [(ngModel)]="txtBookName" #name="ngModel">
+<div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert">
+  <div *ngIf="name.errors?.['required']">
+    Name is required.
+  </div>
+  <div *ngIf="name.errors?.['minlength']">
+    Name must be at least 4 characters long.
+  </div>
+  <div *ngIf="name.errors?.['forbiddenName']">
+    Name cannot be Bob.
+  </div>
+</div> 
+--------------------------------------------------------------------------------------
+how to unbind ng modules?
+----------------------------------------------
 
 
+custom binding in angular?
 
+
+--------------------------------------------------------------------
+<pre ngNonBindable>{{ name }}</pre>
+
+The <pre ngNonBindable>{{ name }}</pre> syntax in Angular is used to prevent Angular from parsing and evaluating the expression ({{ name }}) inside the element. The ngNonBindable directive tells Angular to treat the contents of the element as plain text and not perform any data binding or interpolation.
+
+By using ngNonBindable, Angular will render the element as-is without attempting to evaluate any expressions within it. This can be useful in scenarios where you want to display the literal expression {{ name }} instead of its evaluated value.
+
+------------------------------------------------------------------------------------------------
 
 
  
