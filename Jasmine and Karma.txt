@@ -438,6 +438,58 @@ expect("My name is sandip").toMatch(/My name/);
 });
 
 --------------------------------------------------------------------------------------
+example-15
+------------------
+toBeDefined():- This checks whether any variable is assigned or not.
+example x=10;
+--------------------
+val=10;
+describe("To checks if the variable is assigned or not.",function()
+{
+it("To checks if the variable is assigned or not. ",function()
+{
+expect(val).toBeDefined();
+});
+});
+
+-----------------------------------------------------------------------------------------------------
+example-16
+------------------
+toBeUndefined():- This checks whether any variable is assigned or not.
+example x=10;
+--------------------
+let val;
+describe("To checks if the variable is assigned or not.",function()
+{
+it("To checks if the variable is assigned or not. ",function()
+{
+expect(val).toBeUndefined();
+});
+});
+---------------------------------------------------------------------------------------------------------
+example-17
+---------------------------
+toBeNull() :- This will check the value is null or not.
+example :- var name=null;
+
+example:-
+describe("This will check the value is null or not.",function()
+{
+it("This will check the value is null or not.. ",function()
+{
+var x=null;
+expect(x).toBeNull();
+});
+});
+---------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
