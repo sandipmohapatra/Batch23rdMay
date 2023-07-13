@@ -375,8 +375,39 @@ expect(x.exTF(7)).toBeTruthy();
 });
 });
 -------------------------------------------------------------------------
+ToBeFalsy():- This is Boolean matcher to check whether the result is equal to true or false.
+example 11:-
+----------------------
+window.x={
+exTF : function(num)
+{
+if(num < 10)
+return true;
+else
+return false;
+},
+};
+-----------------------------------------------------------------------
+describe("To Test that the condition is true or false",function()
+{
+it("This is an example of toBeFalsy",function()
+{
+expect(x.exTF(17)).toBeFalsy();
+});
+});
+-------------------------------------------------------------------------
+example-12
+----------------------
+To contain():- It matches with the element in an array or some other sequence Object.
 
-
+describe("To Test that the element is present in the array",function()
+{
+it("This is an example of toContain",function()
+{
+expect([1,2,3,4,5,6,7]).toContain(3);
+});
+});
+-------------------------------------------------------------------------------------------------------------
 
 
 
