@@ -512,6 +512,8 @@ expect(x).toBeLessThan(15);
 });
 
 -------------------------------------------------------------------------------------------------------
+Example-20
+---------------------
 toBeNAN:- to check the output is not a number.
 example :- 6/6=1;0/0=infinity here the output will be NAN.
 ---------------------------
@@ -525,10 +527,101 @@ expect(x).toBeNaN();
 });
 });
 --------------------------------------------------------------------------------------------------------
+Example-21
+--------------------------------------
+contact.ts
+---------------------
+import { Component } from '@angular/core';
+import { FormControl,FormGroup,Validators } from '@angular/forms';
 
+@Component({
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
+})
+export class ContactComponent
+{
+text ='Contact Page';
+contactForm: any;
+contact = {
+  name:'',
+  email:'',
+  text:''
+};
+submitted = false;
 
+constructor()
+{
+  this.createForm();
+}
+createForm():void {
+  this.contactForm =new FormGroup({
 
+    'name':new FormControl(this.contact.name,[
+      Validators.required,
+      Validators.minLength(4)]),
 
+      'email':new FormControl(this.contact.email,[
+      Validators.required,
+      Validators.email]),
+
+      'text':new FormControl(this.contact.text,
+        Validators.required)
+        });
+}
+onSubmit():void{
+  this.submitted =true;
+}
+}
+-----------------------------------------------------------------------------------------
+contact.html
+------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<p>{{ text }}</p>
+<form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+<div class="formGroup">
+<label class="center-block">
+  Name:
+  <input class="form-control" formControlName="name">
+</label>
+<label class="center-block">
+  Email:
+  <input class="form-control" formControlName="email">
+</label>
+<label class="center-block">
+  Text:
+  <input class="form-control" formControlName="text">
+</label>
+</div>
+<button type="submit" [disabled]="!contactForm.valid" class="btn btn-success">Save</button>
+</form>
+</div>
+</body>
+----------------------------------------------------------------------------------------
+module.ts
+----------------
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+imports: [
+    FormsModule,
+    ReactiveFormsModule
+  ],
+---------------------------------------------------------------
+We have 2 types of form
+1)template driven forms
+2)reactive forms
+------------------------------------------------------------
 
 
 
