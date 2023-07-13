@@ -279,7 +279,63 @@ describe("Example of not.toBe() and toEqual()",function()
     });
 });
 -------------------------------------------------------------------------------------------------------------
+example-9
+-----------------------
+example = function() {};
 
+example.prototype.sqr=function(number1)
+{
+return number1*number1;
+}
+
+
+example.prototype.cb=function(number1)
+{
+return number1*number1*number1;
+}
+
+
+example.prototype.gt2=function(number1, number2)
+{
+if(number1>number2)
+{
+return number1;
+}
+else
+{
+return number2;
+}
+}
+----------------------------------------------------------------------------------------------
+describe("example",function()
+{
+var sqr1;
+beforeEach(function()
+{
+sqr1=new example();
+});
+
+describe("we should find the operations",function()
+{
+
+it("should be able to find the square of 1 nos",function()
+{
+expect(sqr1.sqr(4)).toEqual(16);
+});
+
+it("should be able to find the cube of 1 nos",function()
+{
+expect(sqr1.cb(2)).toEqual(8);
+});
+
+it("should be able to find the greatest of 2 nos",function()
+{
+expect(sqr1.gt2(2,3)).toEqual(3);
+});
+
+});
+});
+---------------------------------------------------------------------------------------------------------
 
 
 
