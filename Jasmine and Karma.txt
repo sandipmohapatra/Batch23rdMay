@@ -260,7 +260,7 @@ example-8
 var spot = { name: "Sandip Kumar",Rollno: 101 };
 var cosmo ={ name: "Sandip Kumar",Rollno: 101 };
 -------------------------------------------------
-describe("Example of not.toBe() and toEqual()",function()
+describe("Example of  toBe() and toEqual()",function()
 {
     it("This is an example of toequal method",function()
     {
@@ -336,12 +336,45 @@ expect(sqr1.gt2(2,3)).toEqual(3);
 });
 });
 ---------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
+not.toBe() :-It matches with the type of object.
+It is opposite to toBe()
+------------------------------------------------------------------
+example-10
+---------------------------
+window.x={
+name:"Pawan",
+name1:"Priya"
+};
+------------------------------------------------
+describe("Difference between 2 strings",function()
+{
+it(" example of  not.toBe()",function()
+{
+expect(x.name).not.toBe(x.name1);
+});
+});
+--------------------------------------------------------------------
+ToBeTruthy():- This is Boolean matcher to check whether the result is equal to true or false.
+example 11:-
+----------------------
+window.x={
+exTF : function(num)
+{
+if(num < 10)
+return true;
+else
+return false;
+},
+};
+-----------------------------------------------------------------------
+describe("To Test that the condition is true or false",function()
+{
+it("This is an example of toBeTruthy",function()
+{
+expect(x.exTF(7)).toBeTruthy();
+});
+});
+-------------------------------------------------------------------------
 
 
 
