@@ -408,7 +408,19 @@ expect([1,2,3,4,5,6,7]).toContain(3);
 });
 });
 -------------------------------------------------------------------------------------------------------------
+example-13
+------------------
+ToBeCloseTo():- It matches whether the actual value is near to the expected value.
 
+example:-
+describe("To Test that the element is near to the expected value",function()
+{
+it("This is an example of find if the expected value is near to the real value ",function()
+{
+expect(3.41).toBeCloseTo(3.4,1);
+});
+});
+--------------------------------------------------------------------------------------------------
 
 
 
