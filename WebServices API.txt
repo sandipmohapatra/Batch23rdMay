@@ -1,0 +1,32 @@
+WebServices
+------------------------
+There are 2 types of web services
+1)SOAP (simple object access protocal)
+2)It defines stardard to be strictly followed.
+3)It requires more bandwidth.
+4)It defines its own security.
+5)It permits only XML data format.
+----------------------------------------------------------------------------------
+2)Rest (REpresentational state Transfer )
+1)It uses HTTP protocal and is faster compare to SOAP.
+2)Rest is language and platform independent.
+3)It permits different data format such as Plain Text,HTML,XML and JSON.
+4)It requires less bandwidth.
+5)It inherits security from the third party.
+--------------------------------------------------------------------------------------------
+Restful webservices commonly uses HTTP methods
+-------------------------------
+1)GET :It provides a read only access of the resources.
+2)PUT:It is used to create a new resource.
+3)DELETE:- It is used to remove a resources.
+4)POST:- It is used to update an existing resource or create a new resource.If it is not available.
+-------------------------------------------
+In real webservices are services provided in the web.
+example :- paytm,bookmyshow,amazon.................
+Service Provider :-who develops the service.
+Service Repository  :- cloud repository,mobile phone (play store)
+Service Consumer:- who use the services.
+--------------------------------------------------
+
+
+ 
