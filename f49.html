@@ -1,0 +1,35 @@
+<!-- email Validation using Javascript
+
+example:- a@g.in
+1)email should contain '@' and '.' character.
+2)There must be at least one character before and after '@'
+3)There must be at least two characters after the '.'     -->
+
+
+<script>
+function fun()
+{
+var x=f1.t1.value;
+var y=x.indexOf("@");
+var z=x.lastIndexOf(".");
+if(y<1||z<(y+2)||z+2>=x.length)   <!-- y should not be zero,before '.' there should be 3 characters, -->
+{
+alert("Please enter valid e-mail. The email entered is "+x+"The index of @ is "+y+" The index of '.' is "+z);
+return false;
+}
+else
+{
+alert("It is a valid e-mail .The email entered is "+x+"The index of @ is "+y+" The index of '.' is "+z);
+return true;
+}
+
+}
+</script>
+<body>
+<form name=f1 onsubmit="return fun()">
+Enter your Email<input type="text" name=t1><br>
+<input type="submit" value="register">
+</body>
+
+
+
