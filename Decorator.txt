@@ -1,0 +1,89 @@
+In Angular, a decorator is a special kind of declaration that can be attached to classes, methods, properties, or parameters to modify their behavior or provide additional metadata. Decorators are defined using the @ symbol followed by the decorator name, and they are typically used to enhance the functionality of various Angular elements.
+
+There are several built-in decorators in Angular, and you can also create your own custom decorators. Here are some commonly used decorators in Angular:
+
+@Component: This decorator is used to mark a class as an Angular component. It is typically attached to a class representing a component and provides metadata such as the HTML template, CSS styles, selector, and more.
+Example:
+
+example:-
+@Component({
+  selector: 'app-example',
+  template: '<h1>Hello, Angular!</h1>',
+  styleUrls: ['./example.component.css']
+})
+export class ExampleComponent {
+  // Component logic here
+}
+--------------------------------------------------------------------------------------------------------------
+@Injectable: This decorator is used to mark a class as injectable, which means it can be used as a dependency and injected into other classes or components. It is typically attached to a service class.
+Example:
+
+Example:-
+@Injectable()
+export class DataService {
+  // Service logic here
+}
+--------------------------------------------------------------------------------------------------
+@Directive: This decorator is used to mark a class as an Angular directive. Directives are used to add behavior or modify the appearance of elements in the DOM. They can be structural (e.g., ngIf, ngFor) or attribute-based (e.g., ngStyle, ngClass).
+Example:
+
+example:-
+@Directive({
+  selector: '[appCustomDirective]'
+})
+export class CustomDirective {
+  // Directive logic here
+}
+@Input and @Output: These decorators are used to define input and output properties in components and directives. The @Input decorator allows a parent component to bind a value to a child component, while the @Output decorator allows a child component to emit events to its parent.
+Example:
+
+@Component({
+  selector: 'app-child',
+  template: '<button (click)="onButtonClick()">{{ buttonText }}</button>'
+})
+export class ChildComponent {
+  @Input() buttonText: string;
+  @Output() buttonClick: EventEmitter<void> = new EventEmitter<void>();
+
+  onButtonClick() {
+    this.buttonClick.emit();
+  }
+}
+-----------------------------------------------------------------------------------
+@input
+@output
+@ngModel
+@ngModule
+---------------------------------------------------------------------------
+TypeScript and JavaScript are both programming languages used for web development, but they have some key differences. Here's an overview of TypeScript and JavaScript:
+
+JavaScript:
+
+JavaScript is a dynamic, interpreted scripting language that runs in web browsers. It is primarily used for client-side scripting but can also be used on the server-side (e.g., with Node.js).
+JavaScript has a loose typing system, meaning variables can hold values of any type without explicit type annotations.
+JavaScript is known for its flexibility and simplicity, making it easy to write and understand.
+It lacks certain advanced language features, such as static typing and advanced object-oriented programming concepts.
+TypeScript:
+
+TypeScript is a superset of JavaScript developed by Microsoft. It adds static typing and other features to JavaScript.
+TypeScript introduces a type system, allowing developers to define explicit types for variables, function parameters, return values, and more. It helps catch type-related errors during development and provides better tooling support.
+TypeScript supports modern ECMAScript features and compiles down to JavaScript that can run on any JavaScript runtime.
+It supports object-oriented programming principles like classes, interfaces, inheritance, and generics.
+TypeScript provides features like modules, namespaces, and decorators, which are not available in standard JavaScript.
+It offers great IDE support with features like autocompletion, type checking, and refactoring tools.
+One of the main advantages of TypeScript is that it enhances JavaScript by adding static typing, making code more maintainable and less prone to errors. TypeScript is especially useful for larger-scale projects and teams where codebases can become complex. It also improves developer productivity with better tooling support and code editor features.
+
+However, JavaScript remains widely used and is still the primary language for web development. JavaScript has a larger ecosystem, with a vast number of libraries, frameworks, and resources available. It is also the language supported by all web browsers, allowing you to build client-side applications that run directly in the browser.
+
+TypeScript, on the other hand, provides a more structured and scalable approach to JavaScript development, allowing you to write safer and more maintainable code. It is particularly popular in the Angular framework, where it is the recommended language.
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
