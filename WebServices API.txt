@@ -27,6 +27,58 @@ Service Provider :-who develops the service.
 Service Repository  :- cloud repository,mobile phone (play store)
 Service Consumer:- who use the services.
 --------------------------------------------------
+example-1
+----------------------
+<html>
+<head>
+<title>Employee Information</title>
+</head>
+<body background="cyan">
+<div id="info">
+<center><h1><Font face="Times new Roman" size="+3">Employee Information</h1><hr color=red><hr color=blue>
+<form action="/myaction" method=post>
+<table border=2>
+<tr><td>Name<td><input type=text name=name size=20></tr>
+<tr><td>Address<td><input type=text name=address size=20></tr>
+<tr><td>Email<td><input type=text name=email size=20></tr>
+<tr><td>Phone no<td><input type=text name=phoneno size=20></tr>
+<tr><td><td><input type=submit value=submit></tr>
+</table>
+</form>
+</html>
+-----------------------------------------------------------------
+myaction.js
+-------------------
+var express=require('express');
+var app=express();
+var bodyParser=require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/',function(req,res,next)
+{
+res.sendfile('view/First.html');
+});
+
+app.post('/myaction',function(req,res)
+{
+console.log('req.body');
+console.log(req.body);
+res.write('Your name is " '+req.body.name+' ".\n ');
+res.write('Your address is " '+req.body.address+' ".\n ');
+res.write('Your email is " '+req.body.email+' " .\n');
+res.write('Your phoneno is " '+req.body.phoneno+' " .\n');
+res.end();
+});
+app.listen(3000);
+console.log('This is rest webservices example');
+-----------------------------------------------------------------
+run on command prompt
+---------------------------------------
+step-1 :- npm install express
+step-2 :- npm install body-parser
+step-3 :- node myaction.js
+-------------------------------------------------------
+
 
 
  
