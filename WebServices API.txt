@@ -78,7 +78,22 @@ step-1 :- npm install express
 step-2 :- npm install body-parser
 step-3 :- node myaction.js
 -------------------------------------------------------
+example-2
+-------------------
+second.js
+---------------------
+var person=require('./First.json');
 
-
+console.log(person.firstName+' '+person.lastName+' '+person.address+' '+person.Phoneno);
+---------------------------------------------------------------------
+first.json
+--------------------
+{
+"firstName":"sandip",
+"lastName":"Kumar",
+"address":"Bangalore",
+"Phoneno":"9988776655"
+}
+-----------------------------------------------------------------------------
 
  
