@@ -1934,11 +1934,7 @@ These are some of the major lifecycle hooks available in Angular. By implementin
 --------------------------------------------------------------------------------------
 how to unbind ng modules?
 ----------------------------------------------
-
-
 custom binding in angular?
-
-
 --------------------------------------------------------------------
 <pre ngNonBindable>{{ name }}</pre>
 
@@ -1947,6 +1943,186 @@ The <pre ngNonBindable>{{ name }}</pre> syntax in Angular is used to prevent Ang
 By using ngNonBindable, Angular will render the element as-is without attempting to evaluate any expressions within it. This can be useful in scenarios where you want to display the literal expression {{ name }} instead of its evaluated value.
 
 ------------------------------------------------------------------------------------------------
+Angular HTTP client and HTTP request
+------------------------------------------------------------
+HTTP is a protocal used by internet.we have HTTPs for security.
+The client will give the request to the server.
+In this angular is a client page which will give the request to the middleware server.
+Angular provides an HTTP client module that allows you to make HTTP requests and handle reponses in your angular Application.
+The response will be comming from the server side program.Example spring or springboot which will be running on the tomcat server.It is connected to the database like oracle or Mysql.
+--------------------------------------------------
+gmail--login page --------username/password (request)
+server --reads the username/password
+authentication check with the database and then the server responds back to the 
+client page .if username/password is correct it will redirect to mailbox.
+other wise invalid username/password.
+This is the response which is handled by the client.
+------------------------------------------------------------------------------------------------
+To import for working with HTTPClient
+----------------------------------------------------------------
+import {HttpClient , HttpHeader} from '@angular/common/http';
+import {Observable } from 'rxjs';
+-----------------------------------------------------------------------------------------------------------
+Inject the 'HttpClient' service into your component or service constructor.
+
+constructor(private http: HttpClient){}
+---------------------------------------------------------------------
+To read or get HTTP request
+
+getData(): Observable<any> {
+return this.http.get<any>('https://api.abc.com/data');
+}
+----------------------------------------------------------------------------------
+Observable :- An Observable is a stream of events or data .
+They return from the Angular method--->http.get();
+--------------------------------------------------------------------------------------
+Make a HTTP post request: used for modify the data.
+
+postData(data:any) : Observable<any>
+{
+const headers = new HttpHeaders({'Content-type': 'application/json'});
+return this.http.post.<any>('https://api.abc.com/data',data, {headers});
+}
+---------------------------------------------------------------------------------------------------
+Subscribing kicks off the observable stream .without a subscribe the stream won't start.
+Subscribing is followed by Observable.
+---------------------------------------------------------------------------------------------------
+example:-
+----------------
+this.getData().subscribe((response) => {
+console.log(response);
+}, (error) =>{
+console.error(error);
+});
+-------------------------------------------------------------
+
+https://api.abc.com/data --it is known as end point .
+
+------------------------------------------------------------------------------------
+How to read local JSON files in Angular
+-----------------------------------------------------------------
+step 1:- user.service.ts
+-------------------------------------------------------------------
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map, Observable } from 'rxjs';
+import { UserInformation } from './model/userinformation';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  constructor(private http: HttpClient) {}
+
+  public getUsers(): Observable<UserInformation> {
+    const url = 'https://reqres.in/api/users?page=1';
+      return this.http.get<UserInformation>(url);
+  }
+}
+------------------------------------------------------
+we should have a dummy JSON url.
+it provides the url from where data has to be collected.
+we have this for out dependency injection.
+1)import { Injectable } from '@angular/core';
+---------------------------------------------------------------------------------------
+HTTPClient  is service which is injected to our component.
+-------------------------------------------------------------------------
+import { HttpClient } from '@angular/common/http';
+ constructor(private http: HttpClient) {}
+-----------------------------------------------------------------
+Observable is used to display the data using http.get
+------------------------------------------------------------------------
+public getUsers(): Observable<UserInformation> 
+{
+    const url = 'https://reqres.in/api/users?page=1';
+       return this.http.get<UserInformation>(url);
+
+}
+--------------------------------------------------------------------------------------
+import { UserInformation } from './model/userinformation';
+-------------------------------------------------------------------------------------
+UserInformation
+-----------------------
+export interface User {
+    avatar: string;
+    email: string;
+    first_name: string;
+    id: Number;
+    last_name: string;
+}
+------------------------------------------------------
+import { User } from "./user";
+
+export interface UserInformation {
+    page: Number;
+    per_page: Number;
+    total: Number;
+    total_pages: Number;
+    data: User[];
+}
+-------------------------------------------------------
+user.component.html
+----------------------------
+<li *ngFor="let user of userInfo.data">
+    <span>{{user.first_name}} {{user.last_name}}</span>
+</li>
+----------------------------------------------------------------------------------
+user.component.ts
+-----------------------------------------------
+import { Component, OnInit } from '@angular/core';
+import { User } from '../model/user';
+import { UserInformation } from '../model/userinformation';
+import { UserService } from '../user.service';
+
+@Component({
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.scss']
+})
+export class UserComponent implements OnInit {
+
+
+  userInfo : UserInformation;
+
+  constructor(public userService: UserService) { 
+    this.userInfo = {} as UserInformation;
+  }
+
+  ngOnInit(): void {
+    this.userService.getUsers().subscribe((response:UserInformation) => {
+      debugger;
+      this.userInfo = response;
+      return;
+      console.log(response);
+      this.userInfo.page = response?.page;
+      this.userInfo.per_page = response?.per_page;
+      //this.userInfo.support = response.support;
+      this.userInfo.total = response?.total;
+      this.userInfo.total_pages = response?.total_pages;
+      this.userInfo.data = response?.data?.map(item => {
+        var user = {} as User;
+        user.avatar = item?.avatar;
+        user.email = item?.email;
+        user.first_name = item?.first_name;
+        user.last_name = item?.last_name;
+        user.id = item?.id;
+        return user;
+      });
+    });
+  }
+
+}
+-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
  
