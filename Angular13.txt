@@ -2113,12 +2113,67 @@ export class UserComponent implements OnInit {
 
 }
 -------------------------------------------------------------------
+' ? ' is used for optional property in typescript.
 
+example:-
+interface user
+{
+name:string;
+age?:number;
+}
+const user1:user ={name:'sandip'};
+const user2:user ={name:'amit',age:40};
 
+--------------------------------------------------------------------------
+Angular Form
+-------------------------
+1)Template Driven forms
+2)Reactive forms or Model driven forms.
+--------------------------------------------------------------------
+1)Template Driven form :-
+--------------------------------
+a)A template driven forms is a dynamic forms than can handle client side form .
+b)These forms are heavy on page and will take more time rendering (genrating output)
+c)These form and their elements in template are configure by using the directive.
+i)ngForm   ii)ngModel
+d)ngForm is defined in 'forms module' and used to handle <form> element dynamically.
+ngModel is also defined in the 'forms module' and used to handle input element dynamically.[like text,password,setect..]
 
+example:-
+-----------------
+import {FormsModule } from '@angular/forms';
 
+import :[FormsModule],
 
+------------------------------------------
+app.component.html
+-----------------------------
+<form #frmRegsiter="ngForm" (submit)="onclick(frmRegsiter.value)">
 
+<div class="form-group">
+<label>Name</label>
+<input type="text" class="form-control" name=t1 required #t1="ngModel" ngModel>
+</div>
+-------------------------------------------------------------------------------------------------------------------
+2)Reactive forms or Model driven forms.
+
+Reactive forms or Model driven forms follows a model-driven approach to handle form input whose values can be changed over time.
+In reactive form you can create and update a simple form control.
+We can also use multiple controls in a group.
+Validate form values and implement more advance forms.
+
+import {ReactiveFormModule} from '@angular/forms';
+import:[ReactiveFormModule],
+
+-------------------------------------------------------------------------------------------
+
+<label>
+Name:
+<input type="text" [formControl]="name">
+</label>
+------------------------------------------------------------
+We have registered the form contol to the name input element .
+Now the form control and DOM element communicate with each other and the view  reflects the changes in the model.The model reflects the changes to the view.
 
 
 
