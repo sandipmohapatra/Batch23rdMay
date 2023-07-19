@@ -1,0 +1,696 @@
+Which module is responsible for managing routing in Angular?
+a) FormsModule
+b) RouterModule
+c) HttpClientModule
+d) RouterTestingModule
+
+How do you define a route in Angular?
+a) Using the @Route decorator
+b) Configuring routes in the app.component.ts file
+c) Defining routes in a separate routing module
+d) Using the route() function in the RouterModule
+
+Which directive is used to render the content of a specific route?
+a) *ngIf
+b) *ngFor
+c) *ngSwitch
+d) router-outlet
+
+How do you navigate to a specific route programmatically in Angular?
+a) Using the router.navigate() method
+b) Using the window.location.href property
+c) By changing the value of the routerLink attribute
+d) By manually modifying the URL in the browser's address bar
+
+Which route parameter allows you to pass data to a route in Angular?
+a) query parameters
+b) URL segments
+c) fragment identifiers
+d) optional parameters
+
+How do you guard routes to restrict access based on certain conditions in Angular?
+a) Using the canActivate guard
+b) Using the canDeactivate guard
+c) Using the resolve guard
+d) Using the canLoad guard
+
+Which method of the ActivatedRoute class allows you to access the parameters of the current route?
+a) getParams()
+b) paramMap()
+c) snapshot.params
+d) routeParams()
+
+What is lazy loading in Angular routing?
+a) Loading routes dynamically based on user interactions
+b) Delaying the rendering of a route until it is accessed
+c) Loading routes asynchronously from a remote server
+d) Loading routes based on browser caching mechanisms
+
+Which module should be imported to enable lazy loading in Angular routing?
+a) RouterModule
+b) CommonModule
+c) LazyLoadModule
+d) HttpClientModule
+
+How do you define child routes in Angular?
+a) Using the children property in the route configuration
+b) Defining separate route modules for child routes
+c) Nesting routes within the parent component's template
+d) Using the loadChildren property in the route configuration
+
+Answers:
+
+b) RouterModule
+c) Defining routes in a separate routing module
+d) router-outlet
+a) Using the router.navigate() method
+b) URL segments
+a) Using the canActivate guard
+b) paramMap()
+b) Delaying the rendering of a route until it is accessed
+a) RouterModule
+a) Using the children property in the route configuration
+-------------------------------------------------------------------------------------------------
+Which module is responsible for managing routing in Angular?
+a) FormsModule
+b) RouterModule
+c) HttpClientModule
+d) RouterTestingModule
+
+How do you define a route in Angular?
+a) Using the @Route decorator
+b) Configuring routes in the app.component.ts file
+c) Defining routes in a separate routing module
+d) Using the route() function in the RouterModule
+
+Which directive is used to render the content of a specific route?
+a) *ngIf
+b) *ngFor
+c) *ngSwitch
+d) router-outlet
+
+How do you navigate to a specific route programmatically in Angular?
+a) Using the router.navigate() method
+b) Using the window.location.href property
+c) By changing the value of the routerLink attribute
+d) By manually modifying the URL in the browser's address bar
+
+Which route parameter allows you to pass data to a route in Angular?
+a) query parameters
+b) URL segments
+c) fragment identifiers
+d) optional parameters
+
+How do you guard routes to restrict access based on certain conditions in Angular?
+a) Using the canActivate guard
+b) Using the canDeactivate guard
+c) Using the resolve guard
+d) Using the canLoad guard
+
+Which method of the ActivatedRoute class allows you to access the parameters of the current route?
+a) getParams()
+b) paramMap()
+c) snapshot.params
+d) routeParams()
+
+What is lazy loading in Angular routing?
+a) Loading routes dynamically based on user interactions
+b) Delaying the rendering of a route until it is accessed
+c) Loading routes asynchronously from a remote server
+d) Loading routes based on browser caching mechanisms
+
+Which module should be imported to enable lazy loading in Angular routing?
+a) RouterModule
+b) CommonModule
+c) LazyLoadModule
+d) HttpClientModule
+
+How do you define child routes in Angular?
+a) Using the children property in the route configuration
+b) Defining separate route modules for child routes
+c) Nesting routes within the parent component's template
+d) Using the loadChildren property in the route configuration
+
+Answers:
+
+b) RouterModule
+c) Defining routes in a separate routing module
+d) router-outlet
+a) Using the router.navigate() method
+b) URL segments
+a) Using the canActivate guard
+b) paramMap()
+b) Delaying the rendering of a route until it is accessed
+a) RouterModule
+a) Using the children property in the route configuration
+
+--------------------------------------------------------------------------------------------------
+Which module is responsible for managing routing in Angular?
+a) FormsModule
+b) RouterModule
+c) HttpClientModule
+d) RouterTestingModule
+
+How do you define a route in Angular?
+a) Using the @Route decorator
+b) Configuring routes in the app.component.ts file
+c) Defining routes in a separate routing module
+d) Using the route() function in the RouterModule
+
+Which directive is used to render the content of a specific route?
+a) *ngIf
+b) *ngFor
+c) *ngSwitch
+d) router-outlet
+
+How do you navigate to a specific route programmatically in Angular?
+a) Using the router.navigate() method
+b) Using the window.location.href property
+c) By changing the value of the routerLink attribute
+d) By manually modifying the URL in the browser's address bar
+
+Which route parameter allows you to pass data to a route in Angular?
+a) query parameters
+b) URL segments
+c) fragment identifiers
+d) optional parameters
+
+How do you guard routes to restrict access based on certain conditions in Angular?
+a) Using the canActivate guard
+b) Using the canDeactivate guard
+c) Using the resolve guard
+d) Using the canLoad guard
+
+Which method of the ActivatedRoute class allows you to access the parameters of the current route?
+a) getParams()
+b) paramMap()
+c) snapshot.params
+d) routeParams()
+
+What is lazy loading in Angular routing?
+a) Loading routes dynamically based on user interactions
+b) Delaying the rendering of a route until it is accessed
+c) Loading routes asynchronously from a remote server
+d) Loading routes based on browser caching mechanisms
+
+Which module should be imported to enable lazy loading in Angular routing?
+a) RouterModule
+b) CommonModule
+c) LazyLoadModule
+d) HttpClientModule
+
+How do you define child routes in Angular?
+a) Using the children property in the route configuration
+b) Defining separate route modules for child routes
+c) Nesting routes within the parent component's template
+d) Using the loadChildren property in the route configuration
+
+Answers:
+
+b) RouterModule
+c) Defining routes in a separate routing module
+d) router-outlet
+a) Using the router.navigate() method
+b) URL segments
+a) Using the canActivate guard
+b) paramMap()
+b) Delaying the rendering of a route until it is accessed
+a) RouterModule
+a) Using the children property in the route configuration
+-----------------------------------------------------------------------------------------------
+Which module is responsible for managing routing in Angular?
+a) FormsModule
+b) RouterModule
+c) HttpClientModule
+d) RouterTestingModule
+
+How do you define a route in Angular?
+a) Using the @Route decorator
+b) Configuring routes in the app.component.ts file
+c) Defining routes in a separate routing module
+d) Using the route() function in the RouterModule
+
+Which directive is used to render the content of a specific route?
+a) *ngIf
+b) *ngFor
+c) *ngSwitch
+d) router-outlet
+
+How do you navigate to a specific route programmatically in Angular?
+a) Using the router.navigate() method
+b) Using the window.location.href property
+c) By changing the value of the routerLink attribute
+d) By manually modifying the URL in the browser's address bar
+
+Which route parameter allows you to pass data to a route in Angular?
+a) query parameters
+b) URL segments
+c) fragment identifiers
+d) optional parameters
+
+How do you guard routes to restrict access based on certain conditions in Angular?
+a) Using the canActivate guard
+b) Using the canDeactivate guard
+c) Using the resolve guard
+d) Using the canLoad guard
+
+Which method of the ActivatedRoute class allows you to access the parameters of the current route?
+a) getParams()
+b) paramMap()
+c) snapshot.params
+d) routeParams()
+
+What is lazy loading in Angular routing?
+a) Loading routes dynamically based on user interactions
+b) Delaying the rendering of a route until it is accessed
+c) Loading routes asynchronously from a remote server
+d) Loading routes based on browser caching mechanisms
+
+Which module should be imported to enable lazy loading in Angular routing?
+a) RouterModule
+b) CommonModule
+c) LazyLoadModule
+d) HttpClientModule
+
+How do you define child routes in Angular?
+a) Using the children property in the route configuration
+b) Defining separate route modules for child routes
+c) Nesting routes within the parent component's template
+d) Using the loadChildren property in the route configuration
+
+Answers:
+
+b) RouterModule
+c) Defining routes in a separate routing module
+d) router-outlet
+a) Using the router.navigate() method
+b) URL segments
+a) Using the canActivate guard
+b) paramMap()
+b) Delaying the rendering of a route until it is accessed
+a) RouterModule
+a) Using the children property in the route configuration
+------------------------------------------------------------------------------------------
+Certainly! Here are some multiple-choice questions (MCQs) related to Angular decorators:
+
+What is the purpose of the @Component decorator in Angular?
+a) It defines a new Angular component.
+b) It injects dependencies into a component.
+c) It provides metadata for a component.
+d) It defines the HTML template for a component.
+
+Which decorator is used to define a new Angular service?
+a) @Injectable
+b) @Component
+c) @Directive
+d) @NgModule
+
+What is the purpose of the @Injectable decorator in Angular?
+a) It defines a new Angular component.
+b) It injects dependencies into a component.
+c) It provides metadata for a component.
+d) It defines a new Angular service.
+
+Which decorator is used to define a new Angular directive?
+a) @Directive
+b) @Component
+c) @Injectable
+d) @NgModule
+
+What is the purpose of the @NgModule decorator in Angular?
+a) It defines a new Angular component.
+b) It injects dependencies into a component.
+c) It provides metadata for a component.
+d) It defines a new Angular module.
+
+Which decorator is used to specify the selector and template for an Angular component?
+a) @Injectable
+b) @Component
+c) @Directive
+d) @NgModule
+
+What is the purpose of the @Input decorator in Angular?
+a) It marks a property as an input property.
+b) It defines a new Angular component.
+c) It injects dependencies into a component.
+d) It provides metadata for a component.
+
+Which decorator is used to specify the target element for an Angular directive?
+a) @Injectable
+b) @Component
+c) @Directive
+d) @HostListener
+
+What is the purpose of the @Output decorator in Angular?
+a) It marks a property as an output property.
+b) It defines a new Angular component.
+c) It injects dependencies into a component.
+d) It provides metadata for a component.
+
+Which decorator is used to define a new Angular pipe?
+a) @Pipe
+b) @Component
+c) @Directive
+d) @NgModule
+
+Answers:
+
+c) It provides metadata for a component.
+a) @Injectable
+d) It defines a new Angular service.
+a) @Directive
+d) It defines a new Angular module.
+b) @Component
+a) It marks a property as an input property.
+c) @Directive
+a) It marks a property as an output property.
+a) @Pipe
+---------------------------------------------------------------------------
+What is the purpose of the @Component decorator in Angular?
+a) It defines a new Angular component.
+b) It adds metadata to a component class.
+c) It specifies the HTML template for a component.
+d) It injects dependencies into a component.
+
+Which decorator is used to define an Angular service?
+a) @Injectable
+b) @Component
+c) @Directive
+d) @NgModule
+
+What is the purpose of the @Input decorator?
+a) It marks a property as an input property, allowing it to be bound from a parent component.
+b) It configures dependency injection for a class constructor.
+c) It defines a new Angular directive.
+d) It specifies the selector for a component.
+
+Which decorator is used to define an Angular directive?
+a) @Directive
+b) @Component
+c) @Injectable
+d) @NgModule
+
+What is the purpose of the @Output decorator?
+a) It marks a property as an output property, allowing it to emit events to a parent component.
+b) It specifies the HTML template for a component.
+c) It configures dependency injection for a class constructor.
+d) It defines a new Angular directive.
+
+Which decorator is used to configure dependency injection for a class constructor?
+a) @Injectable
+b) @Component
+c) @Directive
+d) @NgModule
+
+What is the purpose of the @NgModule decorator?
+a) It defines a new Angular component.
+b) It adds metadata to a component class.
+c) It configures the dependencies of a module.
+d) It specifies the HTML template for a component.
+
+Which decorator is used to specify the providers for a module?
+a) @Injectable
+b) @Component
+c) @Directive
+d) @NgModule
+
+What is the purpose of the @HostBinding decorator?
+a) It binds a property of a directive to a host element property.
+b) It marks a property as an input property, allowing it to be bound from a parent component.
+c) It defines a new Angular directive.
+d) It specifies the selector for a component.
+
+Which decorator is used to configure routing for an Angular module?
+a) @Injectable
+b) @Component
+c) @Directive
+d) @NgModule
+
+Answers:
+
+b) It adds metadata to a component class.
+a) @Injectable
+a) It marks a property as an input property, allowing it to be bound from a parent component.
+a) @Directive
+a) It marks a property as an output property, allowing it to emit events to a parent component.
+a) @Injectable
+c) It configures the dependencies of a module.
+d) @NgModule
+a) It binds a property of a directive to a host element property.
+d) @NgModule
+--------------------------------------------------------------------------------------------------------------
+Which decorator is used to define a component in Angular?
+a) @Component
+b) @NgModule
+c) @Injectable
+d) @Directive
+
+Which decorator is used to define a service in Angular?
+a) @Component
+b) @NgModule
+c) @Injectable
+d) @Directive
+
+Which decorator is used to define an input property in Angular?
+a) @Input
+b) @Output
+c) @ViewChild
+d) @HostBinding
+
+Which decorator is used to define an output property in Angular?
+a) @Input
+b) @Output
+c) @ViewChild
+d) @HostBinding
+
+Which decorator is used to inject a dependency in Angular?
+a) @Component
+b) @NgModule
+c) @Injectable
+d) @Directive
+
+Which decorator is used to define a route guard in Angular?
+a) @Component
+b) @NgModule
+c) @Injectable
+d) @Directive
+
+Which decorator is used to define a custom directive in Angular?
+a) @Component
+b) @NgModule
+c) @Injectable
+d) @Directive
+
+Which decorator is used to define a module in Angular?
+a) @Component
+b) @NgModule
+c) @Injectable
+d) @Directive
+
+Which decorator is used to define a pipe in Angular?
+a) @Component
+b) @NgModule
+c) @Injectable
+d) @Pipe
+
+Which decorator is used to provide metadata for a component's template in Angular?
+a) @Component
+b) @NgModule
+c) @Injectable
+d) @Directive
+
+Answers:
+
+a) @Component
+c) @Injectable
+a) @Input
+b) @Output
+c) @Injectable
+c) @Injectable
+d) @Directive
+b) @NgModule
+d) @Pipe
+a) @Component
+----------------------------------------------------------------------
+What is Dependency Injection (DI) in Angular?
+a) A technique to inject dependencies between Angular components
+b) A design pattern to manage dependencies between different modules
+c) A mechanism to resolve and provide dependencies to Angular components
+d) A process to dynamically load modules in Angular applications
+
+Which decorator is used to specify a dependency to be injected in Angular?
+a) @Component
+b) @Injectable
+c) @NgModule
+d) @Directive
+
+How do you provide a dependency at the module level in Angular?
+a) Using the providers array in the @NgModule decorator
+b) Using the @Injectable decorator in the component
+c) Declaring the dependency in the constructor of the component
+d) Defining the dependency in the template of the component
+
+Which of the following is true about Angular's hierarchical injector tree?
+a) Each component has its own injector instance.
+b) Injectors are shared across all components in the application.
+c) Injectors form a tree-like structure based on component hierarchy.
+d) Angular only supports a flat injector structure.
+
+Which injector hierarchy level has the highest priority when resolving dependencies in Angular?
+a) Application level
+b) Module level
+c) Component level
+d) Service level
+
+Which operator in Angular is used to inject a service into a component using DI?
+a) @Injectable
+b) @Inject
+c) @Provided
+d) @Service
+
+What is the purpose of the providedIn property in the @Injectable decorator?
+a) It specifies the module where the service is provided.
+b) It specifies the component where the service is provided.
+c) It allows the service to be injected at the application level.
+d) It allows the service to be injected at the service level.
+
+How can you inject a service with a specific instance in Angular?
+a) By providing the service using the useClass property in the providers array
+b) By specifying the service instance directly in the component's constructor
+c) By using the @Inject decorator to specify the service instance
+d) Angular does not support injecting a specific service instance.
+
+Which decorator is used to request a dependency from Angular's DI system?
+a) @Component
+b) @Injectable
+c) @NgModule
+d) @Inject
+
+Which module is responsible for managing the dependency injection system in Angular?
+a) RouterModule
+b) FormsModule
+c) HttpClientModule
+d) ReflectiveInjector
+
+Answers:
+
+c) A mechanism to resolve and provide dependencies to Angular components
+b) @Injectable
+a) Using the providers array in the @NgModule decorator
+c) Injectors form a tree-like structure based on component hierarchy.
+c) Component level
+b) @Inject
+a) It specifies the module where the service is provided.
+a) By providing the service using the useClass property in the providers array
+d) @Inject
+d) ReflectiveInjector
+
+---------------------------------------------------------------------
+
+What is Dependency Injection (DI) in Angular?
+a) It is a design pattern used to manage dependencies between components.
+b) It is a mechanism to provide data to child components from parent components.
+c) It is a technique to handle HTTP requests and responses in Angular.
+d) It is a feature to style components using CSS.
+
+Which decorator is used to specify a dependency in Angular?
+a) @Component
+b) @NgModule
+c) @Injectable
+d) @Directive
+
+What is the purpose of the @Injectable decorator?
+a) It marks a class as eligible for dependency injection.
+b) It provides a way to inject services into components.
+c) It specifies the component's selector for use in the template.
+d) It defines a custom directive in Angular.
+
+Which mechanism is used to inject dependencies in Angular?
+a) Parameter injection
+b) Property injection
+c) Constructor injection
+d) All of the above
+
+How do you specify a dependency to be injected in the constructor of a component?
+a) Using the @Inject decorator
+b) Using the @Injectable decorator
+c) By declaring a class property with the @Injectable decorator
+d) Angular automatically resolves and injects the dependencies
+
+Which Angular module provides the Dependency Injection system?
+a) FormsModule
+b) RouterModule
+c) HttpClientModule
+d) ReflectiveInjector
+
+What is the purpose of the providedIn property in the @Injectable decorator?
+a) It specifies the module that provides the dependency.
+b) It specifies the location of the dependency's definition.
+c) It determines the scope of the injected dependency.
+d) It configures the dependency to be eagerly loaded.
+
+How can you create a custom provider for a dependency?
+a) By specifying it in the providers array of the component's metadata.
+b) By using the useClass property in the providers array of the component's metadata.
+c) By using the useValue property in the providers array of the component's metadata.
+d) By using the useExisting property in the providers array of the component's metadata.
+
+What is the purpose of the @Optional decorator in dependency injection?
+a) It marks a dependency as optional, allowing injection to proceed even if the dependency is not available.
+b) It specifies the default value for an injected dependency.
+c) It prevents circular dependencies in the injection hierarchy.
+d) It configures a dependency to be eagerly loaded.
+
+What is the recommended approach for testing Angular components with dependencies?
+a) Use real dependencies and ensure they are available during testing.
+b) Use stubs or mocks for dependencies to isolate the component under test.
+c) Use Angular's TestBed to configure the component and its dependencies.
+d) All of the above.
+
+Answers:
+
+a) It is a design pattern used to manage dependencies between components.
+c) @Injectable
+a) It marks a class as eligible for dependency injection.
+d) All of the above
+d) Angular automatically resolves and injects the dependencies
+d) ReflectiveInjector
+a) It specifies the module that provides the dependency.
+a) By specifying it in the providers array of the component's metadata.
+a) It marks a dependency as optional, allowing injection to proceed even if the dependency is not available.
+d) All of the above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
