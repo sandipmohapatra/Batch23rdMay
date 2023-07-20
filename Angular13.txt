@@ -2285,6 +2285,104 @@ mytable,tr,td,th
   margin: 20px;
 }
 ---------------------------------------------------------------------------------------
+Service
+---------------
+1)It is a pre-defined business logic which can be reused in the application by injecting into any component.
+
+what is provider?
+Provider is an object that implements on of the "Provider" interfaces.
+Provider defines how to obtain an injectable dependency associated with a dependeny injection token.
+Injector uses a provider to create a new intance of dependency for a class.
+Angular registers its own providers with every injector for service.
+Angular provides different types of providers
+1)ValueProvider
+2)ClassProvider
+3)TypeProvider
+4)ConstructorProvider
+5)FactoryProvider
+
+syntax:-
+import {injectable} from form '@angular/core';
+
+@Injectable({
+providedIn:'root'})
+--------------------------------
+providedIn:'root' :- This is an option of the @Injectable decorator.
+1)It specifies the root injector as the provider of this service.
+ 2)A single instance of this service shared across the entire application.This is a global or application wide scope.
+3)by using providedIn:'root' we need not manually regsiter the service in the application or NgModule providers array, as Angular will take care of providing the service at the root level automatically.
+----------------------------------------------------
+@Injectable is a typescript decorator provided by angular that marks the class as a service and allows it to be managed by angular dependency injection system.
+
+-----------------------------------------------------------------------------------
+Angular provides different types of providers
+1)ValueProvider :In a value provider it returns a fixed value for dependency injection.
+Injecting fixed value into any component or service using the constructor.
+example:-
+------------------
+book.ts
+---------------
+export class Book {
+	constructor(public bookname: string, public version: string){}
+}
+-------------------------------------------------
+book.component.ts
+----------------------------------
+import { Component, OnInit, InjectionToken, Inject } from '@angular/core';
+import { Book } from './book';
+
+const Angular_Book = new Book('Learn Angular', 'Version 13');
+export const Angular_Message = new InjectionToken<string>('Learn Angular 13!');
+
+@Component({
+    selector: 'book',
+    providers: [
+	    { provide: Book, useValue: Angular_Book },
+		{ provide: Angular_Message, useValue: 'Learn Angular 13 step by step' }
+	],
+    template: `
+	     <p>Book Name: <b>{{book.bookname}}</b> </p>
+		 <p>Version: <b>{{book.version}}</b></p>
+		 <p>Message: <b>{{message}}</b> </p>
+	`
+})
+export class BookComponent1 implements OnInit {
+	constructor(public book: Book,@Inject(Angular_Message) public message: string) { }
+
+	ngOnInit() {
+	}
+}
+
+----------------------------------------------------
+value.component.ts
+--------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-value',
+  template: `<book></book>`,
+
+})
+export class ValueComponent {
+
+}
+-----------------------------------------------------------------------------
+module.ts
+--------------------------------------------
+import {ValueComponent}
+import {BookComponent1}
+
+declaration
+{
+ValueComponent,
+BookComponent,
+},
+
+bootsrap:[ValueComponent]
+----------------------------------------------------------
+
+
+
 
 
 
