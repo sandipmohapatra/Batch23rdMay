@@ -976,11 +976,193 @@ c) It uniquely identifies the resource and its location.
 c) PUT
 a) Hypermedia As The Engine Of Application State
 --------------------------------------------------------------------------------------------------------
+Which function in Jasmine is used to define a test suite?
+a) describe
+b) it
+c) test
+d) suite
+
+In Jasmine, what does the beforeEach function do?
+a) It runs before each test case within a test suite.
+b) It runs after each test case within a test suite.
+c) It runs before the entire test suite.
+d) It runs after the entire test suite.
+
+What is the purpose of the expect function in Jasmine?
+a) It defines the test case.
+b) It defines the expected outcomes of the test.
+c) It provides an assertion to check conditions in the test.
+d) It generates code coverage reports.
+
+How do you mark a test as asynchronous in Jasmine?
+a) By using the async keyword before the test function.
+b) By adding a done parameter to the test function and calling it when the asynchronous operations are complete.
+c) By using the await keyword before the test function.
+d) By using the asynchronous keyword before the test function.
+
+In Jasmine, what does the spyOn function allow you to do?
+a) It allows you to create a new test suite.
+b) It allows you to create a mock function.
+c) It allows you to spy on function calls and track their usage.
+d) It allows you to simulate network requests.
+
+What is the purpose of the toBe matcher in Jasmine?
+a) It checks if two objects are the same instance.
+b) It checks if two objects have the same properties and values.
+c) It checks if a value is true.
+d) It checks if a value is falsy.
+
+How do you run Jasmine tests in a browser?
+a) By executing the test files using Node.js.
+b) By including the Jasmine library and test files in an HTML file and opening it in a browser.
+c) By using the jasmine command in the command line.
+d) By running the tests in a virtual testing environment.
+
+Which Jasmine function is used to handle test cleanup and resource deallocation?
+a) afterEach
+b) cleanup
+c) dispose
+d) tearDown
+
+What does the toHaveBeenCalled matcher in Jasmine check for?
+a) It checks if a function has been called.
+b) It checks if a function has not been called.
+c) It checks if a function has been called with specific arguments.
+d) It checks if a function has been called a specific number of times.
+
+Answers:
+
+a) describe
+a) It runs before each test case within a test suite.
+c) It provides an assertion to check conditions in the test.
+b) By adding a done parameter to the test function and calling it when the asynchronous operations are complete.
+c) It allows you to spy on function calls and track their usage.
+a) It checks if two objects are the same instance.
+b) By including the Jasmine library and test files in an HTML file and opening it in a browser.
+a) afterEach
+a) It checks if a function has been called.
+-----------------------------------------------------------------------------------------------------
+Certainly! Here are some multiple-choice questions (MCQs) related to Jasmine, a popular JavaScript testing framework:
+
+What is Jasmine?
+a) A front-end framework for building user interfaces.
+b) A testing framework for JavaScript applications.
+c) A library for creating interactive charts and graphs.
+d) A package manager for Node.js.
+
+Which function is used in Jasmine to define a test suite?
+a) testSuite()
+b) describe()
+c) test()
+d) it()
+
+In Jasmine, what function is used to define a test case/specification within a test suite?
+a) testCase()
+b) it()
+c) describe()
+d) test()
+
+How can you mark a test as pending in Jasmine?
+a) Using the pending() function within the test case.
+b) Omitting the test case from the test suite.
+c) Using the skip() function within the test case.
+d) Writing a comment within the test case.
+
+What function is used in Jasmine to perform an assertion or expectation in a test case?
+a) expect()
+b) assert()
+c) should()
+d) verify()
+
+In Jasmine, what function is used to simulate asynchronous behavior in a test case?
+a) wait()
+b) setTimeout()
+c) async()
+d) done()
+
+What is the purpose of the beforeEach() function in Jasmine?
+a) It runs before each test case/specification in a test suite.
+b) It runs after each test case/specification in a test suite.
+c) It runs before all test cases/specifications in a test suite.
+d) It runs after all test cases/specifications in a test suite.
+
+Which of the following is the correct way to assert that a variable result is equal to 42 in Jasmine?
+a) assert(result).toBe(42);
+b) expect(result).toBe(42);
+c) verify(result).equals(42);
+d) should(result).equal(42);
+
+What is the purpose of the afterEach() function in Jasmine?
+a) It runs before each test case/specification in a test suite.
+b) It runs after each test case/specification in a test suite.
+c) It runs before all test cases/specifications in a test suite.
+d) It runs after all test cases/specifications in a test suite.
+
+How can you run Jasmine tests in a web browser?
+a) By using a Node.js script to execute the tests.
+b) By using a command-line interface (CLI) to run the tests.
+c) By opening the HTML file that includes the Jasmine test suite.
+d) By integrating Jasmine with a Continuous Integration (CI) tool.
+
+Answers:
+
+b) 
+b) 
+b) 
+c) 
+a) 
+d) 
+a) 
+b) 
+b) 
+c) 
+
+---------------------------------------------------------------------------------------------------------------
+What is the purpose of the beforeEach function in Jasmine?
+a) It defines a setup function that is executed before each test case in a suite.
+b) It defines a teardown function that is executed after each test case in a suite.
+c) It defines a function to be executed before all test cases in a suite.
+d) It defines a function to be executed after all test cases in a suite.
+
+Which of the following matchers is used to check if a value is equal to another value in Jasmine?
+a) toEqual
+b) toBe
+c) toMatch
+d) toBeDefined
+
+What does the spyOn function do in Jasmine?
+a) It creates a new test suite.
+b) It creates a new spy function to track calls to an existing function.
+c) It performs an assertion on the test case.
+d) It defines a mock function for use in the test suite.
+
+In Jasmine, what does the done function do when used as an argument in a test case?
+a) It signals that the test case has failed.
+b) It indicates that the test case is asynchronous and will complete later.
+c) It defines a custom matcher for the test case.
+d) It sets a timeout for the test case.
+
+Which Jasmine function is used to mark a test suite or test case as pending, indicating that it is not yet implemented?
+a) skip
+b) pending
+c) ignore
+d) todo
+
+What is the purpose of using the jasmine.any matcher in Jasmine?
+a) It matches any value, regardless of its type.
+b) It matches null or undefined values.
+c) It matches specific numeric values.
+d) It matches strings with a specific pattern.
+
+Answers:
 
 
-
-
-
+a) It defines a setup function that is executed before each test case in a suite.
+a) toEqual
+b) It creates a new spy function to track calls to an existing function.
+b) It indicates that the test case is asynchronous and will complete later.
+b) pending
+a) It matches any value, regardless of its type.
 
 
 
