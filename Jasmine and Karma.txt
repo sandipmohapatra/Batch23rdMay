@@ -1,3 +1,27 @@
+
+TDD stands for Test-Driven Development. It is a software development approach where developers write tests for a piece of functionality before implementing the actual code to fulfill that functionality. The TDD process typically follows these three steps, known as the "Red-Green-Refactor" cycle:
+
+Red: Write a test that describes the desired behavior of the code you want to implement. Initially, this test will fail since the functionality doesn't exist yet.
+
+Green: Implement the minimum amount of code necessary to make the test pass. This step involves writing the actual code to fulfill the desired functionality.
+
+Refactor: After the test passes, refactor the code to make it cleaner, more maintainable, and efficient while ensuring the test continues to pass. Refactoring does not introduce new features; it only improves the existing code.
+
+The TDD process promotes a few key principles:
+
+Test First: Write tests before writing the production code. This ensures that tests focus on the desired functionality and acts as a specification for the code.
+
+Incremental Development: TDD encourages small, incremental steps of development. Each test added to the suite represents a small piece of functionality, and the implementation evolves gradually.
+
+Regression Testing: By running the test suite frequently, developers can ensure that any changes or additions to the codebase do not break existing functionality. This helps catch potential issues early on.
+
+Design Improvement: TDD can lead to better software design as it forces developers to think about the architecture and modularization of their code early in the development process.
+
+Code Confidence: Developers can have more confidence in the correctness of their code since it is thoroughly tested by a suite of automated tests.
+
+Overall, TDD is a disciplined and iterative approach to software development that aims to improve code quality, maintainability, and the speed of development. However, it may require some upfront effort to create a comprehensive test suite, and it may not be suitable for every project or team.
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 Jasmine and Karma
 --------------------------------
 1)They are open source javascript framework capable to test any kind of javascript application.
